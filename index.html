@@ -1999,5 +1999,17 @@ document.getElementById('modal-overlay').addEventListener('click',e=>{if(e.targe
   document.getElementById('panel-discuss').innerHTML=html;
 })();
 </script>
+<div id="auth-gate" style="position:fixed;inset:0;background:#0f172a;z-index:9999;display:flex;align-items:center;justify-content:center">
+<div style="text-align:center;font-family:-apple-system,system-ui,sans-serif;color:#e2e8f0">
+<h2 style="font-size:1.4rem;margin-bottom:16px">CC 스킬 현황판</h2>
+<p style="color:#94a3b8;font-size:.85rem;margin-bottom:12px">Finito 매니저 전용</p>
+<input id="pw" type="password" placeholder="비밀번호 입력" style="padding:10px 16px;border-radius:8px;border:1px solid #334155;background:#1e293b;color:#e2e8f0;font-size:.9rem;width:200px;outline:none" onkeydown="if(event.key==='Enter')checkPw()">
+<button onclick="checkPw()" style="margin-left:8px;padding:10px 20px;border-radius:8px;border:none;background:#3b82f6;color:#fff;font-size:.9rem;cursor:pointer">확인</button>
+<p id="pw-err" style="color:#ef4444;font-size:.8rem;margin-top:8px;display:none">비밀번호가 틀렸습니다</p>
+</div></div>
+<script>
+function checkPw(){var p=document.getElementById('pw').value;if(btoa(p)==='ZmluaXRvMTEx'){document.getElementById('auth-gate').remove();sessionStorage.setItem('cc-auth','1')}else{document.getElementById('pw-err').style.display='block'}}
+if(sessionStorage.getItem('cc-auth')==='1'){document.addEventListener('DOMContentLoaded',function(){var g=document.getElementById('auth-gate');if(g)g.remove()})}
+</script>
 </body>
 </html>
