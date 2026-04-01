@@ -1056,72 +1056,72 @@ const MERGES = [
   },
   {
     "title": "daily 파이프라인 통합",
-    "summary": "daily + session-close + linear-sync → 단일 스킬",
+    "summary": "daily + linear-sync + session-close → 단일 스킬",
     "skills": [
       "daily",
-      "session-close",
-      "linear-sync"
+      "linear-sync",
+      "session-close"
     ],
-    "detail": "daily이(가) session-close, linear-sync를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "daily이(가) linear-sync, session-close를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "cc-health 파이프라인 통합",
-    "summary": "cc-health + suneung-pipeline + initiative-sharpening + unmet-needs + initiative-digest + daily + linear-sync + notion-migrate + internal-comms + git-pull + suneung-transform + notion-sync + db-text + exam-analyzer → 단일 스킬",
+    "summary": "cc-health + db-text + linear-sync + notion-sync + initiative-digest + exam-analyzer + suneung-transform + initiative-sharpening + suneung-pipeline + git-pull + unmet-needs + notion-migrate + daily + internal-comms → 단일 스킬",
     "skills": [
       "cc-health",
-      "suneung-pipeline",
-      "initiative-sharpening",
-      "unmet-needs",
-      "initiative-digest",
-      "daily",
-      "linear-sync",
-      "notion-migrate",
-      "internal-comms",
-      "git-pull",
-      "suneung-transform",
-      "notion-sync",
       "db-text",
-      "exam-analyzer"
+      "linear-sync",
+      "notion-sync",
+      "initiative-digest",
+      "exam-analyzer",
+      "suneung-transform",
+      "initiative-sharpening",
+      "suneung-pipeline",
+      "git-pull",
+      "unmet-needs",
+      "notion-migrate",
+      "daily",
+      "internal-comms"
     ],
-    "detail": "cc-health이(가) suneung-pipeline, initiative-sharpening, unmet-needs, initiative-digest, daily, linear-sync, notion-migrate, internal-comms, git-pull, suneung-transform, notion-sync, db-text, exam-analyzer를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "cc-health이(가) db-text, linear-sync, notion-sync, initiative-digest, exam-analyzer, suneung-transform, initiative-sharpening, suneung-pipeline, git-pull, unmet-needs, notion-migrate, daily, internal-comms를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "exam-report 파이프라인 통합",
-    "summary": "exam-report + omr-verify + exam-analyzer → 단일 스킬",
+    "summary": "exam-report + exam-analyzer + omr-verify → 단일 스킬",
     "skills": [
       "exam-report",
-      "omr-verify",
-      "exam-analyzer"
+      "exam-analyzer",
+      "omr-verify"
     ],
-    "detail": "exam-report이(가) omr-verify, exam-analyzer를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "exam-report이(가) exam-analyzer, omr-verify를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "suneung-pipeline 파이프라인 통합",
-    "summary": "suneung-pipeline + suneung-transform + db-text → 단일 스킬",
+    "summary": "suneung-pipeline + db-text + suneung-transform → 단일 스킬",
     "skills": [
       "suneung-pipeline",
-      "suneung-transform",
-      "db-text"
+      "db-text",
+      "suneung-transform"
     ],
-    "detail": "suneung-pipeline이(가) suneung-transform, db-text를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "suneung-pipeline이(가) db-text, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "community-pulse 파이프라인 통합",
-    "summary": "community-pulse + winning-ops + live-content → 단일 스킬",
+    "summary": "community-pulse + live-content + winning-ops → 단일 스킬",
     "skills": [
       "community-pulse",
-      "winning-ops",
-      "live-content"
+      "live-content",
+      "winning-ops"
     ],
-    "detail": "community-pulse이(가) winning-ops, live-content를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "community-pulse이(가) live-content, winning-ops를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1139,32 +1139,32 @@ const MERGES = [
   },
   {
     "title": "ve-ops 파이프라인 통합",
-    "summary": "ve-ops + session-close + initiative-sharpening + initiative-digest + linear-sync + document-search + crm-report → 단일 스킬",
+    "summary": "ve-ops + linear-sync + crm-report + initiative-digest + session-close + initiative-sharpening + document-search → 단일 스킬",
     "skills": [
       "ve-ops",
+      "linear-sync",
+      "crm-report",
+      "initiative-digest",
       "session-close",
       "initiative-sharpening",
-      "initiative-digest",
-      "linear-sync",
-      "document-search",
-      "crm-report"
+      "document-search"
     ],
-    "detail": "ve-ops이(가) session-close, initiative-sharpening, initiative-digest, linear-sync, document-search, crm-report를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "ve-ops이(가) linear-sync, crm-report, initiative-digest, session-close, initiative-sharpening, document-search를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "weekly-rhythm 파이프라인 통합",
-    "summary": "weekly-rhythm + class-compare + daily + crm-report + live-content + exam-analyzer → 단일 스킬",
+    "summary": "weekly-rhythm + crm-report + class-compare + exam-analyzer + live-content + daily → 단일 스킬",
     "skills": [
       "weekly-rhythm",
-      "class-compare",
-      "daily",
       "crm-report",
+      "class-compare",
+      "exam-analyzer",
       "live-content",
-      "exam-analyzer"
+      "daily"
     ],
-    "detail": "weekly-rhythm이(가) class-compare, daily, crm-report, live-content, exam-analyzer를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "weekly-rhythm이(가) crm-report, class-compare, exam-analyzer, live-content, daily를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1722,11 +1722,11 @@ const DEPS = [
   },
   {
     "from": "daily",
-    "to": "session-close"
+    "to": "linear-sync"
   },
   {
     "from": "daily",
-    "to": "linear-sync"
+    "to": "session-close"
   },
   {
     "from": "live-content",
@@ -1746,23 +1746,7 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-sharpening"
-  },
-  {
-    "from": "cc-health",
-    "to": "unmet-needs"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-digest"
-  },
-  {
-    "from": "cc-health",
-    "to": "daily"
+    "to": "db-text"
   },
   {
     "from": "cc-health",
@@ -1770,15 +1754,15 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "notion-migrate"
+    "to": "notion-sync"
   },
   {
     "from": "cc-health",
-    "to": "internal-comms"
+    "to": "initiative-digest"
   },
   {
     "from": "cc-health",
-    "to": "git-pull"
+    "to": "exam-analyzer"
   },
   {
     "from": "cc-health",
@@ -1786,15 +1770,31 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "notion-sync"
+    "to": "initiative-sharpening"
   },
   {
     "from": "cc-health",
-    "to": "db-text"
+    "to": "suneung-pipeline"
   },
   {
     "from": "cc-health",
-    "to": "exam-analyzer"
+    "to": "git-pull"
+  },
+  {
+    "from": "cc-health",
+    "to": "unmet-needs"
+  },
+  {
+    "from": "cc-health",
+    "to": "notion-migrate"
+  },
+  {
+    "from": "cc-health",
+    "to": "daily"
+  },
+  {
+    "from": "cc-health",
+    "to": "internal-comms"
   },
   {
     "from": "class-compare",
@@ -1806,11 +1806,11 @@ const DEPS = [
   },
   {
     "from": "exam-report",
-    "to": "omr-verify"
+    "to": "exam-analyzer"
   },
   {
     "from": "exam-report",
-    "to": "exam-analyzer"
+    "to": "omr-verify"
   },
   {
     "from": "notion-sync",
@@ -1822,19 +1822,19 @@ const DEPS = [
   },
   {
     "from": "suneung-pipeline",
-    "to": "suneung-transform"
-  },
-  {
-    "from": "suneung-pipeline",
     "to": "db-text"
   },
   {
-    "from": "community-pulse",
-    "to": "winning-ops"
+    "from": "suneung-pipeline",
+    "to": "suneung-transform"
   },
   {
     "from": "community-pulse",
     "to": "live-content"
+  },
+  {
+    "from": "community-pulse",
+    "to": "winning-ops"
   },
   {
     "from": "ebs-copyright-safe",
@@ -1858,6 +1858,18 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
+    "to": "linear-sync"
+  },
+  {
+    "from": "ve-ops",
+    "to": "crm-report"
+  },
+  {
+    "from": "ve-ops",
+    "to": "initiative-digest"
+  },
+  {
+    "from": "ve-ops",
     "to": "session-close"
   },
   {
@@ -1866,18 +1878,10 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
-    "to": "initiative-digest"
-  },
-  {
-    "from": "ve-ops",
-    "to": "linear-sync"
-  },
-  {
-    "from": "ve-ops",
     "to": "document-search"
   },
   {
-    "from": "ve-ops",
+    "from": "weekly-rhythm",
     "to": "crm-report"
   },
   {
@@ -1886,11 +1890,7 @@ const DEPS = [
   },
   {
     "from": "weekly-rhythm",
-    "to": "daily"
-  },
-  {
-    "from": "weekly-rhythm",
-    "to": "crm-report"
+    "to": "exam-analyzer"
   },
   {
     "from": "weekly-rhythm",
@@ -1898,7 +1898,7 @@ const DEPS = [
   },
   {
     "from": "weekly-rhythm",
-    "to": "exam-analyzer"
+    "to": "daily"
   },
   {
     "from": "linear-reflect",
