@@ -328,7 +328,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
     "detail": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
-    "maker": "yeonseung, zoon, hyun",
+    "maker": "zoon, yeonseung, hyun",
     "commits": 9,
     "lines": 198,
     "scripts": "없음",
@@ -1164,22 +1164,22 @@ const MERGES = [
   },
   {
     "title": "cc-health 파이프라인 통합",
-    "summary": "cc-health + notion-migrate + exam-analyzer + notion-sync + daily + linear-sync + suneung-pipeline + db-text + unmet-needs + initiative-sharpening + suneung-transform + initiative-digest → 단일 스킬",
+    "summary": "cc-health + initiative-sharpening + unmet-needs + linear-sync + db-text + suneung-pipeline + exam-analyzer + initiative-digest + suneung-transform + notion-sync + daily + notion-migrate → 단일 스킬",
     "skills": [
       "cc-health",
-      "notion-migrate",
+      "initiative-sharpening",
+      "unmet-needs",
+      "linear-sync",
+      "db-text",
+      "suneung-pipeline",
       "exam-analyzer",
+      "initiative-digest",
+      "suneung-transform",
       "notion-sync",
       "daily",
-      "linear-sync",
-      "suneung-pipeline",
-      "db-text",
-      "unmet-needs",
-      "initiative-sharpening",
-      "suneung-transform",
-      "initiative-digest"
+      "notion-migrate"
     ],
-    "detail": "cc-health이(가) notion-migrate, exam-analyzer, notion-sync, daily, linear-sync, suneung-pipeline, db-text, unmet-needs, initiative-sharpening, suneung-transform, initiative-digest를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "cc-health이(가) initiative-sharpening, unmet-needs, linear-sync, db-text, suneung-pipeline, exam-analyzer, initiative-digest, suneung-transform, notion-sync, daily, notion-migrate를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1197,42 +1197,42 @@ const MERGES = [
   },
   {
     "title": "community-pulse 파이프라인 통합",
-    "summary": "community-pulse + live-content + winning-ops → 단일 스킬",
+    "summary": "community-pulse + winning-ops + live-content → 단일 스킬",
     "skills": [
       "community-pulse",
-      "live-content",
-      "winning-ops"
+      "winning-ops",
+      "live-content"
     ],
-    "detail": "community-pulse이(가) live-content, winning-ops를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "community-pulse이(가) winning-ops, live-content를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "class-materials-pipeline 파이프라인 통합",
-    "summary": "class-materials-pipeline + frame-publish + problem-import + pk-explain + suneung-pipeline + db-text + class-ppt + suneung-transform → 단일 스킬",
+    "summary": "class-materials-pipeline + pk-explain + class-ppt + db-text + suneung-pipeline + frame-publish + suneung-transform + problem-import → 단일 스킬",
     "skills": [
       "class-materials-pipeline",
-      "frame-publish",
-      "problem-import",
       "pk-explain",
-      "suneung-pipeline",
-      "db-text",
       "class-ppt",
-      "suneung-transform"
+      "db-text",
+      "suneung-pipeline",
+      "frame-publish",
+      "suneung-transform",
+      "problem-import"
     ],
-    "detail": "class-materials-pipeline이(가) frame-publish, problem-import, pk-explain, suneung-pipeline, db-text, class-ppt, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "class-materials-pipeline이(가) pk-explain, class-ppt, db-text, suneung-pipeline, frame-publish, suneung-transform, problem-import를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "initiative-digest 파이프라인 통합",
-    "summary": "initiative-digest + unmet-needs + initiative-sharpening → 단일 스킬",
+    "summary": "initiative-digest + initiative-sharpening + unmet-needs → 단일 스킬",
     "skills": [
       "initiative-digest",
-      "unmet-needs",
-      "initiative-sharpening"
+      "initiative-sharpening",
+      "unmet-needs"
     ],
-    "detail": "initiative-digest이(가) unmet-needs, initiative-sharpening를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "initiative-digest이(가) initiative-sharpening, unmet-needs를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1250,41 +1250,41 @@ const MERGES = [
   },
   {
     "title": "manager-ops 파이프라인 통합",
-    "summary": "manager-ops + live-content + winning-ops → 단일 스킬",
+    "summary": "manager-ops + winning-ops + live-content → 단일 스킬",
     "skills": [
       "manager-ops",
-      "live-content",
-      "winning-ops"
+      "winning-ops",
+      "live-content"
     ],
-    "detail": "manager-ops이(가) live-content, winning-ops를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "manager-ops이(가) winning-ops, live-content를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "ve-ops 파이프라인 통합",
-    "summary": "ve-ops + crm-report + linear-sync + session-close + document-search + initiative-sharpening + initiative-digest → 단일 스킬",
+    "summary": "ve-ops + crm-report + initiative-sharpening + linear-sync + document-search + initiative-digest + session-close → 단일 스킬",
     "skills": [
       "ve-ops",
       "crm-report",
-      "linear-sync",
-      "session-close",
-      "document-search",
       "initiative-sharpening",
-      "initiative-digest"
+      "linear-sync",
+      "document-search",
+      "initiative-digest",
+      "session-close"
     ],
-    "detail": "ve-ops이(가) crm-report, linear-sync, session-close, document-search, initiative-sharpening, initiative-digest를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "ve-ops이(가) crm-report, initiative-sharpening, linear-sync, document-search, initiative-digest, session-close를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "crew-onboarding 파이프라인 통합",
-    "summary": "crew-onboarding + vocab-book + class-ppt → 단일 스킬",
+    "summary": "crew-onboarding + class-ppt + vocab-book → 단일 스킬",
     "skills": [
       "crew-onboarding",
-      "vocab-book",
-      "class-ppt"
+      "class-ppt",
+      "vocab-book"
     ],
-    "detail": "crew-onboarding이(가) vocab-book, class-ppt를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "crew-onboarding이(가) class-ppt, vocab-book를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1893,11 +1893,35 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "notion-migrate"
+    "to": "initiative-sharpening"
+  },
+  {
+    "from": "cc-health",
+    "to": "unmet-needs"
+  },
+  {
+    "from": "cc-health",
+    "to": "linear-sync"
+  },
+  {
+    "from": "cc-health",
+    "to": "db-text"
+  },
+  {
+    "from": "cc-health",
+    "to": "suneung-pipeline"
   },
   {
     "from": "cc-health",
     "to": "exam-analyzer"
+  },
+  {
+    "from": "cc-health",
+    "to": "initiative-digest"
+  },
+  {
+    "from": "cc-health",
+    "to": "suneung-transform"
   },
   {
     "from": "cc-health",
@@ -1909,31 +1933,7 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "linear-sync"
-  },
-  {
-    "from": "cc-health",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "cc-health",
-    "to": "db-text"
-  },
-  {
-    "from": "cc-health",
-    "to": "unmet-needs"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-sharpening"
-  },
-  {
-    "from": "cc-health",
-    "to": "suneung-transform"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-digest"
+    "to": "notion-migrate"
   },
   {
     "from": "exam-report",
@@ -1953,11 +1953,11 @@ const DEPS = [
   },
   {
     "from": "community-pulse",
-    "to": "live-content"
+    "to": "winning-ops"
   },
   {
     "from": "community-pulse",
-    "to": "winning-ops"
+    "to": "live-content"
   },
   {
     "from": "auto-exam-analyzer",
@@ -1969,23 +1969,7 @@ const DEPS = [
   },
   {
     "from": "class-materials-pipeline",
-    "to": "frame-publish"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "problem-import"
-  },
-  {
-    "from": "class-materials-pipeline",
     "to": "pk-explain"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "db-text"
   },
   {
     "from": "class-materials-pipeline",
@@ -1993,15 +1977,31 @@ const DEPS = [
   },
   {
     "from": "class-materials-pipeline",
+    "to": "db-text"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "suneung-pipeline"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "frame-publish"
+  },
+  {
+    "from": "class-materials-pipeline",
     "to": "suneung-transform"
   },
   {
-    "from": "initiative-digest",
-    "to": "unmet-needs"
+    "from": "class-materials-pipeline",
+    "to": "problem-import"
   },
   {
     "from": "initiative-digest",
     "to": "initiative-sharpening"
+  },
+  {
+    "from": "initiative-digest",
+    "to": "unmet-needs"
   },
   {
     "from": "initiative-sharpening",
@@ -2025,11 +2025,11 @@ const DEPS = [
   },
   {
     "from": "manager-ops",
-    "to": "live-content"
+    "to": "winning-ops"
   },
   {
     "from": "manager-ops",
-    "to": "winning-ops"
+    "to": "live-content"
   },
   {
     "from": "notion-digest",
@@ -2045,11 +2045,11 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
-    "to": "linear-sync"
+    "to": "initiative-sharpening"
   },
   {
     "from": "ve-ops",
-    "to": "session-close"
+    "to": "linear-sync"
   },
   {
     "from": "ve-ops",
@@ -2057,19 +2057,19 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
-    "to": "initiative-sharpening"
-  },
-  {
-    "from": "ve-ops",
     "to": "initiative-digest"
   },
   {
-    "from": "crew-onboarding",
-    "to": "vocab-book"
+    "from": "ve-ops",
+    "to": "session-close"
   },
   {
     "from": "crew-onboarding",
     "to": "class-ppt"
+  },
+  {
+    "from": "crew-onboarding",
+    "to": "vocab-book"
   },
   {
     "from": "problem-import",
