@@ -142,9 +142,9 @@ footer{text-align:center;margin-top:24px;font-size:.65rem;color:var(--dim);opaci
 </header>
 
 <div class="top-stats">
-  <div class="stat-pill"><div class="v">62</div><div class="l">전체 스킬</div></div>
+  <div class="stat-pill"><div class="v">63</div><div class="l">전체 스킬</div></div>
   <div class="stat-pill"><div class="v">33</div><div class="l">활성</div></div>
-  <div class="stat-pill"><div class="v">12</div><div class="l">신규</div></div>
+  <div class="stat-pill"><div class="v">13</div><div class="l">신규</div></div>
   <div class="stat-pill"><div class="v" style="color:var(--red)">0</div><div class="l">정리 필요</div></div>
   <div class="stat-pill"><div class="v" style="color:var(--red)">3</div><div class="l">스킬 없는 팀</div></div>
 </div>
@@ -209,6 +209,22 @@ const SKILLS = [
     "modified": "2026-04-02"
   },
   {
+    "name": "winning-ops",
+    "trigger": "/winning-ops",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "위닝하우스 팬 전환 자동화 — 굿즈 배부 알림, 이벤트 타이밍 알림, 예비팬 넛지. 'winning ops', '굿즈 알림', '이벤트 알림', '팬 전환', '위닝 옵스', '굿",
+    "detail": "위닝하우스 팬 전환 자동화 — 굿즈 배부 알림, 이벤트 타이밍 알림, 예비팬 넛지. 'winning ops', '굿즈 알림', '이벤트 알림', '팬 전환', '위닝 옵스', '굿즈 배부', 'goods alert', '넛지' 요청에 사용.",
+    "maker": "hyun",
+    "commits": 18,
+    "lines": 72,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-03-30",
+    "modified": "2026-04-08"
+  },
+  {
     "name": "class-ppt",
     "trigger": "/class-ppt",
     "cat": "콘텐츠 제작",
@@ -223,22 +239,6 @@ const SKILLS = [
     "mcp": "있음",
     "created": "2026-03-18",
     "modified": "2026-03-25"
-  },
-  {
-    "name": "winning-ops",
-    "trigger": "/winning-ops",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "위닝하우스 팬 전환 자동화 — 굿즈 배부 알림, 이벤트 타이밍 알림, 예비팬 넛지. 'winning ops', '굿즈 알림', '이벤트 알림', '팬 전환', '위닝 옵스', '굿",
-    "detail": "위닝하우스 팬 전환 자동화 — 굿즈 배부 알림, 이벤트 타이밍 알림, 예비팬 넛지. 'winning ops', '굿즈 알림', '이벤트 알림', '팬 전환', '위닝 옵스', '굿즈 배부', 'goods alert', '넛지' 요청에 사용.",
-    "maker": "hyun",
-    "commits": 15,
-    "lines": 72,
-    "scripts": "있음",
-    "mcp": "없음",
-    "created": "2026-03-30",
-    "modified": "2026-04-08"
   },
   {
     "name": "db-text",
@@ -273,6 +273,22 @@ const SKILLS = [
     "modified": "2026-04-03"
   },
   {
+    "name": "omr-verify",
+    "trigger": "/omr-verify",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun",
+    "commits": 12,
+    "lines": 633,
+    "scripts": "없음",
+    "mcp": "있음",
+    "created": "2026-03-24",
+    "modified": "2026-04-08"
+  },
+  {
     "name": "linear-sync",
     "trigger": "/linear-sync",
     "cat": "데이터 동기화",
@@ -305,22 +321,6 @@ const SKILLS = [
     "modified": "2026-04-03"
   },
   {
-    "name": "omr-verify",
-    "trigger": "/omr-verify",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "설명 없음",
-    "detail": "",
-    "maker": "hyun",
-    "commits": 11,
-    "lines": 728,
-    "scripts": "없음",
-    "mcp": "있음",
-    "created": "2026-03-24",
-    "modified": "2026-04-04"
-  },
-  {
     "name": "session-close",
     "trigger": "/session-close",
     "cat": "세션 관리",
@@ -328,7 +328,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
     "detail": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
-    "maker": "hyun, zoon, yeonseung",
+    "maker": "hyun, yeonseung, zoon",
     "commits": 9,
     "lines": 198,
     "scripts": "없음",
@@ -1137,6 +1137,22 @@ const SKILLS = [
     "modified": "2026-03-29"
   },
   {
+    "name": "ve",
+    "trigger": "/ve",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "신규",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "zoon",
+    "commits": 1,
+    "lines": 125,
+    "scripts": "없음",
+    "mcp": "없음",
+    "created": "2026-04-09",
+    "modified": "2026-04-09"
+  },
+  {
     "name": "video-compress",
     "trigger": "/video-compress",
     "cat": "도구",
@@ -1200,34 +1216,34 @@ const MERGES = [
   },
   {
     "title": "session-close 파이프라인 통합",
-    "summary": "session-close + workspace-hygiene + linear-reflect → 단일 스킬",
+    "summary": "session-close + linear-reflect + workspace-hygiene → 단일 스킬",
     "skills": [
       "session-close",
-      "workspace-hygiene",
-      "linear-reflect"
+      "linear-reflect",
+      "workspace-hygiene"
     ],
-    "detail": "session-close이(가) workspace-hygiene, linear-reflect를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "session-close이(가) linear-reflect, workspace-hygiene를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "cc-health 파이프라인 통합",
-    "summary": "cc-health + linear-sync + suneung-pipeline + daily + initiative-sharpening + db-text + notion-sync + suneung-transform + notion-migrate + exam-analyzer + unmet-needs + initiative-digest → 단일 스킬",
+    "summary": "cc-health + daily + suneung-transform + unmet-needs + linear-sync + db-text + initiative-digest + exam-analyzer + notion-sync + notion-migrate + initiative-sharpening + suneung-pipeline → 단일 스킬",
     "skills": [
       "cc-health",
-      "linear-sync",
-      "suneung-pipeline",
       "daily",
-      "initiative-sharpening",
-      "db-text",
-      "notion-sync",
       "suneung-transform",
-      "notion-migrate",
-      "exam-analyzer",
       "unmet-needs",
-      "initiative-digest"
+      "linear-sync",
+      "db-text",
+      "initiative-digest",
+      "exam-analyzer",
+      "notion-sync",
+      "notion-migrate",
+      "initiative-sharpening",
+      "suneung-pipeline"
     ],
-    "detail": "cc-health이(가) linear-sync, suneung-pipeline, daily, initiative-sharpening, db-text, notion-sync, suneung-transform, notion-migrate, exam-analyzer, unmet-needs, initiative-digest를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "cc-health이(가) daily, suneung-transform, unmet-needs, linear-sync, db-text, initiative-digest, exam-analyzer, notion-sync, notion-migrate, initiative-sharpening, suneung-pipeline를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1257,42 +1273,42 @@ const MERGES = [
   },
   {
     "title": "class-materials-pipeline 파이프라인 통합",
-    "summary": "class-materials-pipeline + pk-explain + problem-import + suneung-pipeline + frame-publish + db-text + suneung-transform + class-ppt → 단일 스킬",
+    "summary": "class-materials-pipeline + problem-import + suneung-transform + pk-explain + db-text + class-ppt + frame-publish + suneung-pipeline → 단일 스킬",
     "skills": [
       "class-materials-pipeline",
-      "pk-explain",
       "problem-import",
-      "suneung-pipeline",
-      "frame-publish",
-      "db-text",
       "suneung-transform",
-      "class-ppt"
+      "pk-explain",
+      "db-text",
+      "class-ppt",
+      "frame-publish",
+      "suneung-pipeline"
     ],
-    "detail": "class-materials-pipeline이(가) pk-explain, problem-import, suneung-pipeline, frame-publish, db-text, suneung-transform, class-ppt를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "class-materials-pipeline이(가) problem-import, suneung-transform, pk-explain, db-text, class-ppt, frame-publish, suneung-pipeline를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "initiative-digest 파이프라인 통합",
-    "summary": "initiative-digest + initiative-sharpening + unmet-needs → 단일 스킬",
+    "summary": "initiative-digest + unmet-needs + initiative-sharpening → 단일 스킬",
     "skills": [
       "initiative-digest",
-      "initiative-sharpening",
-      "unmet-needs"
+      "unmet-needs",
+      "initiative-sharpening"
     ],
-    "detail": "initiative-digest이(가) initiative-sharpening, unmet-needs를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "initiative-digest이(가) unmet-needs, initiative-sharpening를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "suneung-pipeline 파이프라인 통합",
-    "summary": "suneung-pipeline + db-text + suneung-transform → 단일 스킬",
+    "summary": "suneung-pipeline + suneung-transform + db-text → 단일 스킬",
     "skills": [
       "suneung-pipeline",
-      "db-text",
-      "suneung-transform"
+      "suneung-transform",
+      "db-text"
     ],
-    "detail": "suneung-pipeline이(가) db-text, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "suneung-pipeline이(가) suneung-transform, db-text를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1310,17 +1326,18 @@ const MERGES = [
   },
   {
     "title": "ve-ops 파이프라인 통합",
-    "summary": "ve-ops + crm-report + linear-sync + initiative-sharpening + session-close + document-search + initiative-digest → 단일 스킬",
+    "summary": "ve-ops + linear-sync + session-close + initiative-digest + document-search + crm-report + ve + initiative-sharpening → 단일 스킬",
     "skills": [
       "ve-ops",
-      "crm-report",
       "linear-sync",
-      "initiative-sharpening",
       "session-close",
+      "initiative-digest",
       "document-search",
-      "initiative-digest"
+      "crm-report",
+      "ve",
+      "initiative-sharpening"
     ],
-    "detail": "ve-ops이(가) crm-report, linear-sync, initiative-sharpening, session-close, document-search, initiative-digest를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "ve-ops이(가) linear-sync, session-close, initiative-digest, document-search, crm-report, ve, initiative-sharpening를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1337,12 +1354,24 @@ const MERGES = [
     "type": "pipeline"
   },
   {
+    "title": "ve 파이프라인 통합",
+    "summary": "ve + ve-ops + reward-decision → 단일 스킬",
+    "skills": [
+      "ve",
+      "ve-ops",
+      "reward-decision"
+    ],
+    "detail": "ve이(가) ve-ops, reward-decision를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
+    "type": "pipeline"
+  },
+  {
     "title": "airtable MCP 스킬 통합",
-    "summary": "exam-analyzer + live-content + omr-verify + exam-report + community-pulse + crm-report + initiative-update + auto-exam-analyzer + textbook-fee + mn-sync → 모드 선택 방식",
+    "summary": "exam-analyzer + omr-verify + live-content + exam-report + community-pulse + crm-report + initiative-update + auto-exam-analyzer + textbook-fee + mn-sync → 모드 선택 방식",
     "skills": [
       "exam-analyzer",
-      "live-content",
       "omr-verify",
+      "live-content",
       "exam-report",
       "community-pulse",
       "crm-report",
@@ -1502,7 +1531,7 @@ const DISCUSSES = [
   },
   {
     "icon": "⚠️",
-    "title": "zoon 혼자 16개 스킬 관리",
+    "title": "zoon 혼자 17개 스킬 관리",
     "desc": "핵심 스킬의 공동 관리 논의 필요. zoon 부재 시 운영 리스크."
   },
   {
@@ -1512,18 +1541,18 @@ const DISCUSSES = [
   },
   {
     "icon": "⚠️",
-    "title": "단일 기여자 스킬 43개",
+    "title": "단일 기여자 스킬 44개",
     "desc": "CRITICAL Bus Factor 스킬이 많음. 핵심 스킬 공동 관리 체계 논의 필요."
   },
   {
     "icon": "💡",
     "title": "비대한 스킬 4개",
-    "desc": "omr-verify, exam-report, hr-legal, linear-reflect. 스크립트 없이 프롬프트만 728줄+. 스크립트 분리 권장."
+    "desc": "omr-verify, exam-report, hr-legal, linear-reflect. 스크립트 없이 프롬프트만 633줄+. 스크립트 분리 권장."
   },
   {
     "icon": "💡",
     "title": "잘 만든 스킬 = 본보기",
-    "desc": "exam-analyzer, class-ppt, winning-ops. 반복 개선 + 스크립트 분리 구조. 새 스킬은 이 패턴 따르면 좋음."
+    "desc": "exam-analyzer, winning-ops, class-ppt. 반복 개선 + 스크립트 분리 구조. 새 스킬은 이 패턴 따르면 좋음."
   },
   {
     "icon": "🚨",
@@ -1535,15 +1564,15 @@ const AUTHORS = [
   {
     "name": "hyun",
     "skills": 49,
-    "commits": 154,
+    "commits": 158,
     "lastActive": "2026-04-08",
     "topSkill": "exam-analyzer"
   },
   {
     "name": "zoon",
-    "skills": 16,
-    "commits": 24,
-    "lastActive": "2026-03-26",
+    "skills": 17,
+    "commits": 25,
+    "lastActive": "2026-04-09",
     "topSkill": "daily"
   },
   {
@@ -1779,6 +1808,12 @@ const BUS_FACTOR = [
     "owner": "yeonseung"
   },
   {
+    "skill": "ve",
+    "contributors": 1,
+    "risk": "CRITICAL",
+    "owner": "zoon"
+  },
+  {
     "skill": "ve-ops",
     "contributors": 1,
     "risk": "CRITICAL",
@@ -1948,11 +1983,11 @@ const DEPS = [
   },
   {
     "from": "session-close",
-    "to": "workspace-hygiene"
+    "to": "linear-reflect"
   },
   {
     "from": "session-close",
-    "to": "linear-reflect"
+    "to": "workspace-hygiene"
   },
   {
     "from": "suneung-transform",
@@ -1960,27 +1995,7 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "linear-sync"
-  },
-  {
-    "from": "cc-health",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "cc-health",
     "to": "daily"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-sharpening"
-  },
-  {
-    "from": "cc-health",
-    "to": "db-text"
-  },
-  {
-    "from": "cc-health",
-    "to": "notion-sync"
   },
   {
     "from": "cc-health",
@@ -1988,7 +2003,19 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "notion-migrate"
+    "to": "unmet-needs"
+  },
+  {
+    "from": "cc-health",
+    "to": "linear-sync"
+  },
+  {
+    "from": "cc-health",
+    "to": "db-text"
+  },
+  {
+    "from": "cc-health",
+    "to": "initiative-digest"
   },
   {
     "from": "cc-health",
@@ -1996,11 +2023,19 @@ const DEPS = [
   },
   {
     "from": "cc-health",
-    "to": "unmet-needs"
+    "to": "notion-sync"
   },
   {
     "from": "cc-health",
-    "to": "initiative-digest"
+    "to": "notion-migrate"
+  },
+  {
+    "from": "cc-health",
+    "to": "initiative-sharpening"
+  },
+  {
+    "from": "cc-health",
+    "to": "suneung-pipeline"
   },
   {
     "from": "exam-report",
@@ -2028,23 +2063,7 @@ const DEPS = [
   },
   {
     "from": "class-materials-pipeline",
-    "to": "pk-explain"
-  },
-  {
-    "from": "class-materials-pipeline",
     "to": "problem-import"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "frame-publish"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "db-text"
   },
   {
     "from": "class-materials-pipeline",
@@ -2052,7 +2071,23 @@ const DEPS = [
   },
   {
     "from": "class-materials-pipeline",
+    "to": "pk-explain"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "db-text"
+  },
+  {
+    "from": "class-materials-pipeline",
     "to": "class-ppt"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "frame-publish"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "suneung-pipeline"
   },
   {
     "from": "auto-exam-analyzer",
@@ -2068,11 +2103,11 @@ const DEPS = [
   },
   {
     "from": "initiative-digest",
-    "to": "initiative-sharpening"
+    "to": "unmet-needs"
   },
   {
     "from": "initiative-digest",
-    "to": "unmet-needs"
+    "to": "initiative-sharpening"
   },
   {
     "from": "initiative-sharpening",
@@ -2084,11 +2119,11 @@ const DEPS = [
   },
   {
     "from": "suneung-pipeline",
-    "to": "db-text"
+    "to": "suneung-transform"
   },
   {
     "from": "suneung-pipeline",
-    "to": "suneung-transform"
+    "to": "db-text"
   },
   {
     "from": "linear-reflect",
@@ -2108,15 +2143,7 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
-    "to": "crm-report"
-  },
-  {
-    "from": "ve-ops",
     "to": "linear-sync"
-  },
-  {
-    "from": "ve-ops",
-    "to": "initiative-sharpening"
   },
   {
     "from": "ve-ops",
@@ -2124,11 +2151,27 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
+    "to": "initiative-digest"
+  },
+  {
+    "from": "ve-ops",
     "to": "document-search"
   },
   {
     "from": "ve-ops",
-    "to": "initiative-digest"
+    "to": "crm-report"
+  },
+  {
+    "from": "ve-ops",
+    "to": "ve"
+  },
+  {
+    "from": "ve-ops",
+    "to": "initiative-sharpening"
+  },
+  {
+    "from": "workspace-hygiene",
+    "to": "ve"
   },
   {
     "from": "ai-salon-producer",
@@ -2143,8 +2186,20 @@ const DEPS = [
     "to": "class-ppt"
   },
   {
+    "from": "fandom-boost",
+    "to": "ve"
+  },
+  {
     "from": "problem-import",
     "to": "db-text"
+  },
+  {
+    "from": "ve",
+    "to": "ve-ops"
+  },
+  {
+    "from": "ve",
+    "to": "reward-decision"
   }
 ];
 
