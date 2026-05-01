@@ -138,13 +138,13 @@ footer{text-align:center;margin-top:24px;font-size:.65rem;color:var(--dim);opaci
 
 <header>
   <h1>CC 스킬 현황판</h1>
-  <div class="sub">2026-04-29 · Finito 팀 · 스킬 카탈로그 + 정비 논의용</div>
+  <div class="sub">2026-05-01 · Finito 팀 · 스킬 카탈로그 + 정비 논의용</div>
 </header>
 
 <div class="top-stats">
-  <div class="stat-pill"><div class="v">86</div><div class="l">전체 스킬</div></div>
+  <div class="stat-pill"><div class="v">87</div><div class="l">전체 스킬</div></div>
   <div class="stat-pill"><div class="v">49</div><div class="l">활성</div></div>
-  <div class="stat-pill"><div class="v">1</div><div class="l">신규</div></div>
+  <div class="stat-pill"><div class="v">2</div><div class="l">신규</div></div>
   <div class="stat-pill"><div class="v" style="color:var(--red)">0</div><div class="l">정리 필요</div></div>
   <div class="stat-pill"><div class="v" style="color:var(--red)">3</div><div class="l">스킬 없는 팀</div></div>
 </div>
@@ -209,6 +209,22 @@ const SKILLS = [
     "modified": "2026-04-21"
   },
   {
+    "name": "skill-dori",
+    "trigger": "/skill-dori",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun, yeonseung",
+    "commits": 28,
+    "lines": 122,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-04-13",
+    "modified": "2026-04-27"
+  },
+  {
     "name": "exam-analyzer",
     "trigger": "/exam-analyzer",
     "cat": "데이터 동기화",
@@ -239,22 +255,6 @@ const SKILLS = [
     "mcp": "있음",
     "created": "2026-03-18",
     "modified": "2026-04-24"
-  },
-  {
-    "name": "skill-dori",
-    "trigger": "/skill-dori",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "설명 없음",
-    "detail": "",
-    "maker": "yeonseung, hyun",
-    "commits": 19,
-    "lines": 122,
-    "scripts": "있음",
-    "mcp": "없음",
-    "created": "2026-04-13",
-    "modified": "2026-04-22"
   },
   {
     "name": "db-text",
@@ -296,7 +296,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
     "detail": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
-    "maker": "yeonseung, zoon, hyun",
+    "maker": "hyun, yeonseung, zoon",
     "commits": 14,
     "lines": 379,
     "scripts": "없음",
@@ -312,7 +312,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "데일리 브리핑 스킬. 세션 시작 시 사용자를 선택한 후 Linear Cycle 이슈, 전날 Slack 요약, 요일별 루틴, 아이디어/메모를 종합하여 오늘의 할 일을 브리핑한다",
     "detail": "데일리 브리핑 스킬. 세션 시작 시 사용자를 선택한 후 Linear Cycle 이슈, 전날 Slack 요약, 요일별 루틴, 아이디어/메모를 종합하여 오늘의 할 일을 브리핑한다",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 13,
     "lines": 302,
     "scripts": "없음",
@@ -328,12 +328,44 @@ const SKILLS = [
     "status": "활성",
     "desc": "수능 교재 지문을 다른 유형으로 변형 문제 생성",
     "detail": "수능 교재 지문을 다른 유형으로 변형 문제 생성",
-    "maker": "yeonseung, hyun, 에이전트",
+    "maker": "hyun, yeonseung, 에이전트",
     "commits": 13,
     "lines": 310,
     "scripts": "없음",
     "mcp": "없음",
     "created": "2026-03-15",
+    "modified": "2026-04-26"
+  },
+  {
+    "name": "class-materials-pipeline",
+    "trigger": "/class-materials-pipeline",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun, yeonseung, 에이전트",
+    "commits": 12,
+    "lines": 474,
+    "scripts": "없음",
+    "mcp": "없음",
+    "created": "2026-04-02",
+    "modified": "2026-04-26"
+  },
+  {
+    "name": "hall-of-fame",
+    "trigger": "/hall-of-fame",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/h",
+    "detail": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/hall-of-fame', '명예의 전당', 'hall of fame' 요청 시 사용.",
+    "maker": "hyun",
+    "commits": 12,
+    "lines": 127,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-04-16",
     "modified": "2026-04-26"
   },
   {
@@ -344,7 +376,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "Linear 이니셔티브·프로젝트를 로컬 워크스페이스에 단방향 동기화",
     "detail": "Linear 이니셔티브·프로젝트를 로컬 워크스페이스에 단방향 동기화",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 12,
     "lines": 151,
     "scripts": "있음",
@@ -376,42 +408,10 @@ const SKILLS = [
     "status": "활성",
     "desc": "설명 없음",
     "detail": "",
-    "maker": "yeonseung, hyun, 에이전트",
+    "maker": "hyun, yeonseung, 에이전트",
     "commits": 12,
     "lines": 602,
     "scripts": "없음",
-    "mcp": "없음",
-    "created": "2026-03-22",
-    "modified": "2026-04-26"
-  },
-  {
-    "name": "class-materials-pipeline",
-    "trigger": "/class-materials-pipeline",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "설명 없음",
-    "detail": "",
-    "maker": "yeonseung, hyun, 에이전트",
-    "commits": 11,
-    "lines": 459,
-    "scripts": "없음",
-    "mcp": "없음",
-    "created": "2026-04-02",
-    "modified": "2026-04-26"
-  },
-  {
-    "name": "frame-publish",
-    "trigger": "/frame-publish",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "설명 없음",
-    "detail": "",
-    "maker": "yeonseung, hyun, 에이전트",
-    "commits": 11,
-    "lines": 265,
-    "scripts": "있음",
     "mcp": "없음",
     "created": "2026-03-22",
     "modified": "2026-04-26"
@@ -424,13 +424,45 @@ const SKILLS = [
     "status": "활성",
     "desc": "Claude Code 활용 현황 대시보드. 스킬 인벤토리, 기여자 맵, Bus Factor, 품질 시그널, 팀 커버리지 갭을 분석하여 HTML 대시보드로 생성",
     "detail": "Claude Code 활용 현황 대시보드. 스킬 인벤토리, 기여자 맵, Bus Factor, 품질 시그널, 팀 커버리지 갭을 분석하여 HTML 대시보드로 생성",
-    "maker": "yeonseung, hyun, 에이전트",
-    "commits": 10,
+    "maker": "hyun, yeonseung, 에이전트",
+    "commits": 11,
     "lines": 176,
     "scripts": "있음",
     "mcp": "있음",
     "created": "2026-03-18",
-    "modified": "2026-04-22"
+    "modified": "2026-04-26"
+  },
+  {
+    "name": "frame-publish",
+    "trigger": "/frame-publish",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun, yeonseung, 에이전트",
+    "commits": 11,
+    "lines": 265,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-03-22",
+    "modified": "2026-04-26"
+  },
+  {
+    "name": "competitor-monitor",
+    "trigger": "/competitor-monitor",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "경쟁 영어 강사 5명(메가스터디 조정식·김지영, 대성마이맥 이명학·션티·이영수) 페이지를 매주 월요일 자동 스크래핑하여 강좌·가격·프로모션·신규 공지 변경사항을 diff하고 md+",
+    "detail": "경쟁 영어 강사 5명(메가스터디 조정식·김지영, 대성마이맥 이명학·션티·이영수) 페이지를 매주 월요일 자동 스크래핑하여 강좌·가격·프로모션·신규 공지 변경사항을 diff하고 md+PDF 리포트로 정리한다. '경쟁사 모니터링', 'competitor monitor', '주간 경쟁사', '강사 5명', '인강 트렌드', '경쟁 강사', '조정식 김지영 이명학 션티 이영수' 요청에 사용.",
+    "maker": "hyun, yeonseung, community-watch-bot, 에이전트",
+    "commits": 10,
+    "lines": 136,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-04-13",
+    "modified": "2026-04-26"
   },
   {
     "name": "crew-ranking",
@@ -440,29 +472,13 @@ const SKILLS = [
     "status": "활성",
     "desc": "크루 업무 성과 순위를 Notion 근무일지에서 자동 산출하여 Slack으로 발송하는 스킬. AI 자연어 파싱으로 복합 업무를 분리하고, 기준 시간 대비 효율을 측정합니다",
     "detail": "크루 업무 성과 순위를 Notion 근무일지에서 자동 산출하여 Slack으로 발송하는 스킬. AI 자연어 파싱으로 복합 업무를 분리하고, 기준 시간 대비 효율을 측정합니다",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 10,
     "lines": 414,
     "scripts": "없음",
     "mcp": "없음",
     "created": "2026-03-29",
     "modified": "2026-04-24"
-  },
-  {
-    "name": "hall-of-fame",
-    "trigger": "/hall-of-fame",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/h",
-    "detail": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/hall-of-fame', '명예의 전당', 'hall of fame' 요청 시 사용.",
-    "maker": "hyun",
-    "commits": 10,
-    "lines": 127,
-    "scripts": "있음",
-    "mcp": "없음",
-    "created": "2026-04-16",
-    "modified": "2026-04-23"
   },
   {
     "name": "vocab-book",
@@ -472,7 +488,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "설명 없음",
     "detail": "",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 10,
     "lines": 134,
     "scripts": "있음",
@@ -495,22 +511,6 @@ const SKILLS = [
     "mcp": "없음",
     "created": "2026-03-18",
     "modified": "2026-04-23"
-  },
-  {
-    "name": "competitor-monitor",
-    "trigger": "/competitor-monitor",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "경쟁 영어 강사 5명(메가스터디 조정식·김지영, 대성마이맥 이명학·션티·이영수) 페이지를 매주 월요일 자동 스크래핑하여 강좌·가격·프로모션·신규 공지 변경사항을 diff하고 md+",
-    "detail": "경쟁 영어 강사 5명(메가스터디 조정식·김지영, 대성마이맥 이명학·션티·이영수) 페이지를 매주 월요일 자동 스크래핑하여 강좌·가격·프로모션·신규 공지 변경사항을 diff하고 md+PDF 리포트로 정리한다. '경쟁사 모니터링', 'competitor monitor', '주간 경쟁사', '강사 5명', '인강 트렌드', '경쟁 강사', '조정식 김지영 이명학 션티 이영수' 요청에 사용.",
-    "maker": "yeonseung, community-watch-bot, hyun, 에이전트",
-    "commits": 9,
-    "lines": 136,
-    "scripts": "있음",
-    "mcp": "없음",
-    "created": "2026-04-13",
-    "modified": "2026-04-24"
   },
   {
     "name": "curri-manager",
@@ -552,7 +552,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "크루 입사/퇴사 절차 관리 및 HR 법적 리스크 검증 스킬. 입사 시 계약서 생성·체크리스트 실행, 퇴사 시 정산·반납·법적 절차를 안내한다. 6개 에이전트(Contract-Dra",
     "detail": "크루 입사/퇴사 절차 관리 및 HR 법적 리스크 검증 스킬. 입사 시 계약서 생성·체크리스트 실행, 퇴사 시 정산·반납·법적 절차를 안내한다. 6개 에이전트(Contract-Drafter, Compliance-Auditor, Labor-Law, Dispute-Shield, Privacy-Guard, HR-Chief)가 교차 검증한다",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 8,
     "lines": 797,
     "scripts": "없음",
@@ -616,7 +616,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "문서의 정의·숫자·구조·참조 충돌 감지 및 심각도 분석",
     "detail": "문서의 정의·숫자·구조·참조 충돌 감지 및 심각도 분석",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 6,
     "lines": 535,
     "scripts": "있음",
@@ -632,7 +632,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "Generate CRM weekly reports and load Airtable snapshots",
     "detail": "Generate CRM weekly reports and load Airtable snapshots",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 6,
     "lines": 166,
     "scripts": "있음",
@@ -648,7 +648,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "EBS 문제 3중 저작권 보호 (본문·유형·선지 변형)",
     "detail": "EBS 문제 3중 저작권 보호 (본문·유형·선지 변형)",
-    "maker": "yeonseung, hyun, 에이전트",
+    "maker": "hyun, yeonseung, 에이전트",
     "commits": 6,
     "lines": 360,
     "scripts": "없음",
@@ -680,7 +680,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "Notion 페이지·데이터베이스를 로컬 sync-data로 단방향 동기화",
     "detail": "Notion 페이지·데이터베이스를 로컬 sync-data로 단방향 동기화",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 6,
     "lines": 334,
     "scripts": "있음",
@@ -744,7 +744,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "내부 매니저 미팅 전 상대방의 최근 활동을 Git + Linear에서 수집하여 브리핑한다",
     "detail": "내부 매니저 미팅 전 상대방의 최근 활동을 Git + Linear에서 수집하여 브리핑한다",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 5,
     "lines": 126,
     "scripts": "없음",
@@ -760,7 +760,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "워크숍 사전 데이터 수집 스킬. 매니저가 4가지 소스(현장 관찰, CRM 수치, 학생 피드백, 매니저 직관)에서 시장 신호를 수집하고, 경쟁사 동향을 분석하여 Hypothesis ",
     "detail": "워크숍 사전 데이터 수집 스킬. 매니저가 4가지 소스(현장 관찰, CRM 수치, 학생 피드백, 매니저 직관)에서 시장 신호를 수집하고, 경쟁사 동향을 분석하여 Hypothesis Canvas BOX 1~3(Market Gap, Customer Voice, Unmet Need) 사전 채움 문서를 생성합니다",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 5,
     "lines": 393,
     "scripts": "없음",
@@ -776,7 +776,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "설명 없음",
     "detail": "",
-    "maker": "yeonseung, hyun, 에이전트",
+    "maker": "hyun, yeonseung, 에이전트",
     "commits": 5,
     "lines": 291,
     "scripts": "없음",
@@ -792,7 +792,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "크루 개별 HR 평가 스킬. Notion 근무일지 기반 업무 임팩트 분석, 본문 기재율, 효율 측정, 급여 타당성, 유지/해고 결정까지 표준화된 프레임워크로 평가하여 PDF 리포트",
     "detail": "크루 개별 HR 평가 스킬. Notion 근무일지 기반 업무 임팩트 분석, 본문 기재율, 효율 측정, 급여 타당성, 유지/해고 결정까지 표준화된 프레임워크로 평가하여 PDF 리포트를 생성한다. '크루 평가', 'crew-hr-review', 'HR 평가', '해고 검토', '급여 타당성', '크루 리뷰' 요청에 사용.",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 4,
     "lines": 201,
     "scripts": "있음",
@@ -952,7 +952,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "매니저 워크스페이스 문서를 메타데이터로 검색·필터링",
     "detail": "매니저 워크스페이스 문서를 메타데이터로 검색·필터링",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 3,
     "lines": 120,
     "scripts": "있음",
@@ -984,7 +984,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "이니셔티브 샤프닝 결과 소화 — 매니저 가설 확정 세션",
     "detail": "이니셔티브 샤프닝 결과 소화 — 매니저 가설 확정 세션",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 3,
     "lines": 287,
     "scripts": "없음",
@@ -1000,7 +1000,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "이니셔티브 2.0 가설 샤프닝 스킬. zoon이 매니저의 2.0 전환문과 unmet-needs 결과를 받아서, clarify 3종(vague/unknown/metamedium) 프",
     "detail": "이니셔티브 2.0 가설 샤프닝 스킬. zoon이 매니저의 2.0 전환문과 unmet-needs 결과를 받아서, clarify 3종(vague/unknown/metamedium) 프로토콜을 순차 적용하고 외부 리서치를 결합하여 뾰족한 가설 후보 2~3개를 생성합니다",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 3,
     "lines": 351,
     "scripts": "없음",
@@ -1016,7 +1016,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "설명 없음",
     "detail": "",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 3,
     "lines": 144,
     "scripts": "있음",
@@ -1032,13 +1032,29 @@ const SKILLS = [
     "status": "활성",
     "desc": "설명 없음",
     "detail": "",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 3,
     "lines": 176,
     "scripts": "없음",
     "mcp": "있음",
     "created": "2026-03-22",
     "modified": "2026-04-24"
+  },
+  {
+    "name": "product-create",
+    "trigger": "/product-create",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun, woong",
+    "commits": 3,
+    "lines": 746,
+    "scripts": "없음",
+    "mcp": "없음",
+    "created": "2026-04-22",
+    "modified": "2026-04-29"
   },
   {
     "name": "suneung-pipeline",
@@ -1064,7 +1080,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "고연승 인스타그램 마케터 오케스트레이터. 월간 전략·주간 캘린더·단건 제작(릴스/피드/스토리) 3모드로 인스타 계정 전체를 운영한다. insta-marketer(PD/전략) + i",
     "detail": "고연승 인스타그램 마케터 오케스트레이터. 월간 전략·주간 캘린더·단건 제작(릴스/피드/스토리) 3모드로 인스타 계정 전체를 운영한다. insta-marketer(PD/전략) + insta-feed-writer(피드 포스트) + insta-story-producer(스토리) + yeonseung-reels 스킬 위임(릴스)으로 구성. 브랜드타워 톤앤매너 + PD 전략 브리프 앵커 내장. '인스타 마케팅', '인스타 전략', '이번 달 인스타', '주간 인스타', '피드 포스트', '캐러셀 만들어', '스토리 기획', '인스타 캘린더', '1만 팔로워', 'yeonseung-insta' 요청에 사용. 목표: 2,900 → 10,000 팔로워 돌파.",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 3,
     "lines": 210,
     "scripts": "없음",
@@ -1080,7 +1096,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "고연승 개인 브랜딩용 숏폼(인스타 릴스 + 틱톡) 1편 기획→원고→촬영 가이드를 원스톱으로 생성하는 오케스트레이터. reels-reference-scout(레퍼런스 리서치) → r",
     "detail": "고연승 개인 브랜딩용 숏폼(인스타 릴스 + 틱톡) 1편 기획→원고→촬영 가이드를 원스톱으로 생성하는 오케스트레이터. reels-reference-scout(레퍼런스 리서치) → reels-planner(기획자) → reels-copywriter(원고 작가) → reels-director(촬영 감독) 4단계 파이프라인. 브랜드타워 톤앤매너 + PD 전략 브리프(킬러 포맷 6종, 3-Layer, 독점 용어 11종) 앵커 내장. '릴스 기획', '숏폼 만들어', '인스타 마케터', 'yeonseung-reels', '연승 릴스', '인스타 1만 팔로워', '릴스 원고', '촬영 가이드' 요청에 사용. 목표: 2,900 → 10,000 팔로워 돌파.",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 3,
     "lines": 163,
     "scripts": "없음",
@@ -1096,7 +1112,7 @@ const SKILLS = [
     "status": "활성",
     "desc": "설명 없음",
     "detail": "",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 2,
     "lines": 207,
     "scripts": "있음",
@@ -1160,7 +1176,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "Claude Code 세션에서 수행한 작업을 분석하여 Linear에 반영하는 스킬. 기존 프로젝트/이슈 landscape를 Deep Scan하여 포지셔닝하고, 이슈 업데이트/신규 ",
     "detail": "Claude Code 세션에서 수행한 작업을 분석하여 Linear에 반영하는 스킬. 기존 프로젝트/이슈 landscape를 Deep Scan하여 포지셔닝하고, 이슈 업데이트/신규 이슈/프로젝트 생성을 구분하여 제안한다. session-close에서 외부 컨텍스트 모드로 호출 가능. '/linear-reflect', '리니어 반영해줘', '이거 리니어에 넣어줘', 'linear reflect', '리니어 이슈 만들어줘', '액션 추적해줘' 트리거.",
-    "maker": "zoon, hyun",
+    "maker": "hyun, zoon",
     "commits": 2,
     "lines": 489,
     "scripts": "없음",
@@ -1249,22 +1265,6 @@ const SKILLS = [
     "modified": "2026-04-20"
   },
   {
-    "name": "product-create",
-    "trigger": "/product-create",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "설명 없음",
-    "detail": "",
-    "maker": "hyun, woong",
-    "commits": 2,
-    "lines": 664,
-    "scripts": "없음",
-    "mcp": "없음",
-    "created": "2026-04-22",
-    "modified": "2026-04-23"
-  },
-  {
     "name": "promo-copy",
     "trigger": "/promo-copy",
     "cat": "도구",
@@ -1288,7 +1288,7 @@ const SKILLS = [
     "status": "안정",
     "desc": "Slack 채널에 정기 알림 메시지 최대 120일 자동 예약",
     "detail": "Slack 채널에 정기 알림 메시지 최대 120일 자동 예약",
-    "maker": "yeonseung, hyun",
+    "maker": "hyun, yeonseung",
     "commits": 2,
     "lines": 108,
     "scripts": "없음",
@@ -1489,6 +1489,22 @@ const SKILLS = [
     "modified": "2026-03-22"
   },
   {
+    "name": "scan-prep",
+    "trigger": "/scan-prep",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "신규",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun",
+    "commits": 1,
+    "lines": 173,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-04-28",
+    "modified": "2026-04-28"
+  },
+  {
     "name": "setup-local",
     "trigger": "/setup-local",
     "cat": "도구",
@@ -1572,14 +1588,14 @@ const SKILLS = [
 const MERGES = [
   {
     "title": "session-close 파이프라인 통합",
-    "summary": "session-close + workspace-hygiene + linear-reflect + winning-ops → 단일 스킬",
+    "summary": "session-close + linear-reflect + winning-ops + workspace-hygiene → 단일 스킬",
     "skills": [
       "session-close",
-      "workspace-hygiene",
       "linear-reflect",
-      "winning-ops"
+      "winning-ops",
+      "workspace-hygiene"
     ],
-    "detail": "session-close이(가) workspace-hygiene, linear-reflect, winning-ops를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "session-close이(가) linear-reflect, winning-ops, workspace-hygiene를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1597,13 +1613,32 @@ const MERGES = [
   },
   {
     "title": "suneung-transform 파이프라인 통합",
-    "summary": "suneung-transform + explain-cross-check + db-text → 단일 스킬",
+    "summary": "suneung-transform + db-text + explain-cross-check → 단일 스킬",
     "skills": [
       "suneung-transform",
-      "explain-cross-check",
-      "db-text"
+      "db-text",
+      "explain-cross-check"
     ],
-    "detail": "suneung-transform이(가) explain-cross-check, db-text를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "suneung-transform이(가) db-text, explain-cross-check를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
+    "type": "pipeline"
+  },
+  {
+    "title": "class-materials-pipeline 파이프라인 통합",
+    "summary": "class-materials-pipeline + class-ppt + db-text + explain-cross-check + frame-publish + pk-explain + problem-import + skill-dori + suneung-pipeline + suneung-transform → 단일 스킬",
+    "skills": [
+      "class-materials-pipeline",
+      "class-ppt",
+      "db-text",
+      "explain-cross-check",
+      "frame-publish",
+      "pk-explain",
+      "problem-import",
+      "skill-dori",
+      "suneung-pipeline",
+      "suneung-transform"
+    ],
+    "detail": "class-materials-pipeline이(가) class-ppt, db-text, explain-cross-check, frame-publish, pk-explain, problem-import, skill-dori, suneung-pipeline, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1620,20 +1655,23 @@ const MERGES = [
     "type": "pipeline"
   },
   {
-    "title": "class-materials-pipeline 파이프라인 통합",
-    "summary": "class-materials-pipeline + explain-cross-check + problem-import + class-ppt + suneung-transform + suneung-pipeline + db-text + frame-publish + pk-explain → 단일 스킬",
+    "title": "cc-health 파이프라인 통합",
+    "summary": "cc-health + daily + db-text + exam-analyzer + initiative-digest + initiative-sharpening + linear-sync + notion-migrate + notion-sync + suneung-pipeline + suneung-transform + unmet-needs → 단일 스킬",
     "skills": [
-      "class-materials-pipeline",
-      "explain-cross-check",
-      "problem-import",
-      "class-ppt",
-      "suneung-transform",
-      "suneung-pipeline",
+      "cc-health",
+      "daily",
       "db-text",
-      "frame-publish",
-      "pk-explain"
+      "exam-analyzer",
+      "initiative-digest",
+      "initiative-sharpening",
+      "linear-sync",
+      "notion-migrate",
+      "notion-sync",
+      "suneung-pipeline",
+      "suneung-transform",
+      "unmet-needs"
     ],
-    "detail": "class-materials-pipeline이(가) explain-cross-check, problem-import, class-ppt, suneung-transform, suneung-pipeline, db-text, frame-publish, pk-explain를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "cc-health이(가) daily, db-text, exam-analyzer, initiative-digest, initiative-sharpening, linear-sync, notion-migrate, notion-sync, suneung-pipeline, suneung-transform, unmet-needs를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1651,50 +1689,29 @@ const MERGES = [
     "type": "pipeline"
   },
   {
-    "title": "cc-health 파이프라인 통합",
-    "summary": "cc-health + notion-migrate + linear-sync + suneung-transform + unmet-needs + notion-sync + daily + suneung-pipeline + db-text + initiative-sharpening + initiative-digest + exam-analyzer → 단일 스킬",
-    "skills": [
-      "cc-health",
-      "notion-migrate",
-      "linear-sync",
-      "suneung-transform",
-      "unmet-needs",
-      "notion-sync",
-      "daily",
-      "suneung-pipeline",
-      "db-text",
-      "initiative-sharpening",
-      "initiative-digest",
-      "exam-analyzer"
-    ],
-    "detail": "cc-health이(가) notion-migrate, linear-sync, suneung-transform, unmet-needs, notion-sync, daily, suneung-pipeline, db-text, initiative-sharpening, initiative-digest, exam-analyzer를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
-    "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
-    "type": "pipeline"
-  },
-  {
     "title": "curri-manager 파이프라인 통합",
-    "summary": "curri-manager + curriculum-architect + community-pulse + curri-dashboard + daily + skill-dori → 단일 스킬",
+    "summary": "curri-manager + community-pulse + curri-dashboard + curriculum-architect + daily + skill-dori → 단일 스킬",
     "skills": [
       "curri-manager",
-      "curriculum-architect",
       "community-pulse",
       "curri-dashboard",
+      "curriculum-architect",
       "daily",
       "skill-dori"
     ],
-    "detail": "curri-manager이(가) curriculum-architect, community-pulse, curri-dashboard, daily, skill-dori를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "curri-manager이(가) community-pulse, curri-dashboard, curriculum-architect, daily, skill-dori를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "exam-report 파이프라인 통합",
-    "summary": "exam-report + omr-verify + exam-analyzer → 단일 스킬",
+    "summary": "exam-report + exam-analyzer + omr-verify → 단일 스킬",
     "skills": [
       "exam-report",
-      "omr-verify",
-      "exam-analyzer"
+      "exam-analyzer",
+      "omr-verify"
     ],
-    "detail": "exam-report이(가) omr-verify, exam-analyzer를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "exam-report이(가) exam-analyzer, omr-verify를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1712,43 +1729,43 @@ const MERGES = [
   },
   {
     "title": "ebs-copyright-safe 파이프라인 통합",
-    "summary": "ebs-copyright-safe + explain-cross-check + db-text → 단일 스킬",
+    "summary": "ebs-copyright-safe + db-text + explain-cross-check → 단일 스킬",
     "skills": [
       "ebs-copyright-safe",
-      "explain-cross-check",
-      "db-text"
+      "db-text",
+      "explain-cross-check"
     ],
-    "detail": "ebs-copyright-safe이(가) explain-cross-check, db-text를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "ebs-copyright-safe이(가) db-text, explain-cross-check를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "explain-cross-check 파이프라인 통합",
-    "summary": "explain-cross-check + curri-manager + curriculum-architect + class-materials-pipeline + suneung-transform + conflict-detector + frame-publish + pk-explain → 단일 스킬",
+    "summary": "explain-cross-check + class-materials-pipeline + conflict-detector + curri-manager + curriculum-architect + frame-publish + pk-explain + suneung-transform → 단일 스킬",
     "skills": [
       "explain-cross-check",
+      "class-materials-pipeline",
+      "conflict-detector",
       "curri-manager",
       "curriculum-architect",
-      "class-materials-pipeline",
-      "suneung-transform",
-      "conflict-detector",
       "frame-publish",
-      "pk-explain"
+      "pk-explain",
+      "suneung-transform"
     ],
-    "detail": "explain-cross-check이(가) curri-manager, curriculum-architect, class-materials-pipeline, suneung-transform, conflict-detector, frame-publish, pk-explain를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "explain-cross-check이(가) class-materials-pipeline, conflict-detector, curri-manager, curriculum-architect, frame-publish, pk-explain, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "crew-onboarding 파이프라인 통합",
-    "summary": "crew-onboarding + class-ppt + vocab-book + crew-session-close → 단일 스킬",
+    "summary": "crew-onboarding + class-ppt + crew-session-close + vocab-book → 단일 스킬",
     "skills": [
       "crew-onboarding",
       "class-ppt",
-      "vocab-book",
-      "crew-session-close"
+      "crew-session-close",
+      "vocab-book"
     ],
-    "detail": "crew-onboarding이(가) class-ppt, vocab-book, crew-session-close를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "crew-onboarding이(가) class-ppt, crew-session-close, vocab-book를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1778,14 +1795,14 @@ const MERGES = [
   },
   {
     "title": "hr-risk 파이프라인 통합",
-    "summary": "hr-risk + crew-ranking + hr-legal + crew-hr-review → 단일 스킬",
+    "summary": "hr-risk + crew-hr-review + crew-ranking + hr-legal → 단일 스킬",
     "skills": [
       "hr-risk",
+      "crew-hr-review",
       "crew-ranking",
-      "hr-legal",
-      "crew-hr-review"
+      "hr-legal"
     ],
-    "detail": "hr-risk이(가) crew-ranking, hr-legal, crew-hr-review를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "hr-risk이(가) crew-hr-review, crew-ranking, hr-legal를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1803,25 +1820,25 @@ const MERGES = [
   },
   {
     "title": "initiative-digest 파이프라인 통합",
-    "summary": "initiative-digest + unmet-needs + initiative-sharpening → 단일 스킬",
+    "summary": "initiative-digest + initiative-sharpening + unmet-needs → 단일 스킬",
     "skills": [
       "initiative-digest",
-      "unmet-needs",
-      "initiative-sharpening"
+      "initiative-sharpening",
+      "unmet-needs"
     ],
-    "detail": "initiative-digest이(가) unmet-needs, initiative-sharpening를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "initiative-digest이(가) initiative-sharpening, unmet-needs를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "suneung-pipeline 파이프라인 통합",
-    "summary": "suneung-pipeline + suneung-transform + db-text → 단일 스킬",
+    "summary": "suneung-pipeline + db-text + suneung-transform → 단일 스킬",
     "skills": [
       "suneung-pipeline",
-      "suneung-transform",
-      "db-text"
+      "db-text",
+      "suneung-transform"
     ],
-    "detail": "suneung-pipeline이(가) suneung-transform, db-text를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "suneung-pipeline이(가) db-text, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1839,16 +1856,16 @@ const MERGES = [
   },
   {
     "title": "curriculum-architect 파이프라인 통합",
-    "summary": "curriculum-architect + curri-manager + class-materials-pipeline + asset-publish + yeonseung-insta + yeonseung-reels → 단일 스킬",
+    "summary": "curriculum-architect + asset-publish + class-materials-pipeline + curri-manager + yeonseung-insta + yeonseung-reels → 단일 스킬",
     "skills": [
       "curriculum-architect",
-      "curri-manager",
-      "class-materials-pipeline",
       "asset-publish",
+      "class-materials-pipeline",
+      "curri-manager",
       "yeonseung-insta",
       "yeonseung-reels"
     ],
-    "detail": "curriculum-architect이(가) curri-manager, class-materials-pipeline, asset-publish, yeonseung-insta, yeonseung-reels를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "curriculum-architect이(가) asset-publish, class-materials-pipeline, curri-manager, yeonseung-insta, yeonseung-reels를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1866,31 +1883,31 @@ const MERGES = [
   },
   {
     "title": "promo-copy 파이프라인 통합",
-    "summary": "promo-copy + curriculum-architect + asset-publish + skill-dori → 단일 스킬",
+    "summary": "promo-copy + asset-publish + curriculum-architect + skill-dori → 단일 스킬",
     "skills": [
       "promo-copy",
-      "curriculum-architect",
       "asset-publish",
+      "curriculum-architect",
       "skill-dori"
     ],
-    "detail": "promo-copy이(가) curriculum-architect, asset-publish, skill-dori를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "promo-copy이(가) asset-publish, curriculum-architect, skill-dori를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
   {
     "title": "ve-ops 파이프라인 통합",
-    "summary": "ve-ops + crm-report + linear-sync + document-search + initiative-sharpening + initiative-digest + ve + session-close → 단일 스킬",
+    "summary": "ve-ops + crm-report + document-search + initiative-digest + initiative-sharpening + linear-sync + session-close + ve → 단일 스킬",
     "skills": [
       "ve-ops",
       "crm-report",
-      "linear-sync",
       "document-search",
-      "initiative-sharpening",
       "initiative-digest",
-      "ve",
-      "session-close"
+      "initiative-sharpening",
+      "linear-sync",
+      "session-close",
+      "ve"
     ],
-    "detail": "ve-ops이(가) crm-report, linear-sync, document-search, initiative-sharpening, initiative-digest, ve, session-close를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "ve-ops이(가) crm-report, document-search, initiative-digest, initiative-sharpening, linear-sync, session-close, ve를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1908,19 +1925,19 @@ const MERGES = [
   },
   {
     "title": "airtable MCP 스킬 통합",
-    "summary": "exam-analyzer + live-content + omr-verify + exam-report + community-pulse + crm-report + auto-exam-analyzer + initiative-update + crew-boundary + textbook-fee + mn-sync → 모드 선택 방식",
+    "summary": "auto-exam-analyzer + community-pulse + crew-boundary + crm-report + exam-analyzer + exam-report + initiative-update + live-content + mn-sync + omr-verify + textbook-fee → 모드 선택 방식",
     "skills": [
-      "exam-analyzer",
-      "live-content",
-      "omr-verify",
-      "exam-report",
-      "community-pulse",
-      "crm-report",
       "auto-exam-analyzer",
-      "initiative-update",
+      "community-pulse",
       "crew-boundary",
-      "textbook-fee",
-      "mn-sync"
+      "crm-report",
+      "exam-analyzer",
+      "exam-report",
+      "initiative-update",
+      "live-content",
+      "mn-sync",
+      "omr-verify",
+      "textbook-fee"
     ],
     "detail": "11개 스킬이 모두 airtable MCP를 사용. 하나의 스킬에서 모드로 분기하면 중복 제거 가능.",
     "reason": "같은 MCP(airtable) 의존 — 데이터 흐름 공유",
@@ -1928,14 +1945,14 @@ const MERGES = [
   },
   {
     "title": "claude_ai_Slack MCP 스킬 통합",
-    "summary": "class-ppt + live-content + session-close + daily + curri-manager + explain-cross-check + ve-ops → 모드 선택 방식",
+    "summary": "class-ppt + curri-manager + daily + explain-cross-check + live-content + session-close + ve-ops → 모드 선택 방식",
     "skills": [
       "class-ppt",
+      "curri-manager",
+      "daily",
+      "explain-cross-check",
       "live-content",
       "session-close",
-      "daily",
-      "curri-manager",
-      "explain-cross-check",
       "ve-ops"
     ],
     "detail": "7개 스킬이 모두 claude_ai_Slack MCP를 사용. 하나의 스킬에서 모드로 분기하면 중복 제거 가능.",
@@ -1944,11 +1961,11 @@ const MERGES = [
   },
   {
     "title": "linear MCP 스킬 통합",
-    "summary": "daily + meeting-prep + initiative-update → 모드 선택 방식",
+    "summary": "daily + initiative-update + meeting-prep → 모드 선택 방식",
     "skills": [
       "daily",
-      "meeting-prep",
-      "initiative-update"
+      "initiative-update",
+      "meeting-prep"
     ],
     "detail": "3개 스킬이 모두 linear MCP를 사용. 하나의 스킬에서 모드로 분기하면 중복 제거 가능.",
     "reason": "같은 MCP(linear) 의존 — 데이터 흐름 공유",
@@ -1956,10 +1973,10 @@ const MERGES = [
   },
   {
     "title": "claude_ai_Linear MCP 스킬 통합",
-    "summary": "linear-sync + linear-reflect + ve-ops → 모드 선택 방식",
+    "summary": "linear-reflect + linear-sync + ve-ops → 모드 선택 방식",
     "skills": [
-      "linear-sync",
       "linear-reflect",
+      "linear-sync",
       "ve-ops"
     ],
     "detail": "3개 스킬이 모두 claude_ai_Linear MCP를 사용. 하나의 스킬에서 모드로 분기하면 중복 제거 가능.",
@@ -1968,11 +1985,11 @@ const MERGES = [
   },
   {
     "title": "claude_ai_Notion MCP 스킬 통합",
-    "summary": "crew-boundary + presentation-builder + asset-publish → 모드 선택 방식",
+    "summary": "asset-publish + crew-boundary + presentation-builder → 모드 선택 방식",
     "skills": [
+      "asset-publish",
       "crew-boundary",
-      "presentation-builder",
-      "asset-publish"
+      "presentation-builder"
     ],
     "detail": "3개 스킬이 모두 claude_ai_Notion MCP를 사용. 하나의 스킬에서 모드로 분기하면 중복 제거 가능.",
     "reason": "같은 MCP(claude_ai_Notion) 의존 — 데이터 흐름 공유",
@@ -1980,11 +1997,11 @@ const MERGES = [
   },
   {
     "title": "class-* 스킬 통합 검토",
-    "summary": "class-ppt + class-materials-pipeline + class-bridge",
+    "summary": "class-bridge + class-materials-pipeline + class-ppt",
     "skills": [
-      "class-ppt",
+      "class-bridge",
       "class-materials-pipeline",
-      "class-bridge"
+      "class-ppt"
     ],
     "detail": "같은 접두사(class-)를 공유하는 3개 스킬. 기능 중복 여부 검토 필요.",
     "reason": "이름 유사(class-*) — 기능 겹침 가능성",
@@ -1992,11 +2009,11 @@ const MERGES = [
   },
   {
     "title": "omr-* 스킬 통합 검토",
-    "summary": "omr-verify + omr-benchmark + omr-product",
+    "summary": "omr-benchmark + omr-product + omr-verify",
     "skills": [
-      "omr-verify",
       "omr-benchmark",
-      "omr-product"
+      "omr-product",
+      "omr-verify"
     ],
     "detail": "같은 접두사(omr-)를 공유하는 3개 스킬. 기능 중복 여부 검토 필요.",
     "reason": "이름 유사(omr-*) — 기능 겹침 가능성",
@@ -2004,14 +2021,14 @@ const MERGES = [
   },
   {
     "title": "crew-* 스킬 통합 검토",
-    "summary": "crew-ranking + crew-session-close + crew-onboarding + crew-hr-review + crew-pull + crew-boundary",
+    "summary": "crew-boundary + crew-hr-review + crew-onboarding + crew-pull + crew-ranking + crew-session-close",
     "skills": [
-      "crew-ranking",
-      "crew-session-close",
-      "crew-onboarding",
+      "crew-boundary",
       "crew-hr-review",
+      "crew-onboarding",
       "crew-pull",
-      "crew-boundary"
+      "crew-ranking",
+      "crew-session-close"
     ],
     "detail": "같은 접두사(crew-)를 공유하는 6개 스킬. 기능 중복 여부 검토 필요.",
     "reason": "이름 유사(crew-*) — 기능 겹침 가능성",
@@ -2019,11 +2036,11 @@ const MERGES = [
   },
   {
     "title": "yeonseung-* 스킬 통합 검토",
-    "summary": "yeonseung-workflow + yeonseung-insta + yeonseung-reels",
+    "summary": "yeonseung-insta + yeonseung-reels + yeonseung-workflow",
     "skills": [
-      "yeonseung-workflow",
       "yeonseung-insta",
-      "yeonseung-reels"
+      "yeonseung-reels",
+      "yeonseung-workflow"
     ],
     "detail": "같은 접두사(yeonseung-)를 공유하는 3개 스킬. 기능 중복 여부 검토 필요.",
     "reason": "이름 유사(yeonseung-*) — 기능 겹침 가능성",
@@ -2109,7 +2126,7 @@ const GAPS = [
 const DISCUSSES = [
   {
     "icon": "⚠️",
-    "title": "hyun 혼자 70개 스킬 관리",
+    "title": "hyun 혼자 71개 스킬 관리",
     "desc": "핵심 스킬의 공동 관리 논의 필요. hyun 부재 시 운영 리스크."
   },
   {
@@ -2129,18 +2146,18 @@ const DISCUSSES = [
   },
   {
     "icon": "⚠️",
-    "title": "단일 기여자 스킬 46개",
+    "title": "단일 기여자 스킬 47개",
     "desc": "CRITICAL Bus Factor 스킬이 많음. 핵심 스킬 공동 관리 체계 논의 필요."
   },
   {
     "icon": "💡",
     "title": "비대한 스킬 10개",
-    "desc": "omr-verify, pk-explain, class-materials-pipeline, crew-ranking. 스크립트 없이 프롬프트만 633줄+. 스크립트 분리 권장."
+    "desc": "class-materials-pipeline, omr-verify, pk-explain, crew-ranking. 스크립트 없이 프롬프트만 474줄+. 스크립트 분리 권장."
   },
   {
     "icon": "💡",
     "title": "잘 만든 스킬 = 본보기",
-    "desc": "winning-ops, exam-analyzer, class-ppt. 반복 개선 + 스크립트 분리 구조. 새 스킬은 이 패턴 따르면 좋음."
+    "desc": "winning-ops, skill-dori, exam-analyzer. 반복 개선 + 스크립트 분리 구조. 새 스킬은 이 패턴 따르면 좋음."
   },
   {
     "icon": "🚨",
@@ -2151,9 +2168,9 @@ const DISCUSSES = [
 const AUTHORS = [
   {
     "name": "hyun",
-    "skills": 70,
-    "commits": 239,
-    "lastActive": "2026-04-23",
+    "skills": 71,
+    "commits": 251,
+    "lastActive": "2026-04-27",
     "topSkill": "winning-ops"
   },
   {
@@ -2180,15 +2197,15 @@ const AUTHORS = [
   {
     "name": "community-watch-bot",
     "skills": 1,
-    "commits": 3,
-    "lastActive": "2026-04-23",
+    "commits": 4,
+    "lastActive": "2026-04-26",
     "topSkill": "competitor-monitor"
   },
   {
     "name": "woong",
     "skills": 2,
-    "commits": 2,
-    "lastActive": "2026-04-22",
+    "commits": 3,
+    "lastActive": "2026-04-29",
     "topSkill": "product-create"
   }
 ];
@@ -2392,6 +2409,12 @@ const BUS_FACTOR = [
     "owner": "yeonseung"
   },
   {
+    "skill": "scan-prep",
+    "contributors": 1,
+    "risk": "CRITICAL",
+    "owner": "hyun"
+  },
+  {
     "skill": "setup-local",
     "contributors": 1,
     "risk": "CRITICAL",
@@ -2473,7 +2496,7 @@ const BUS_FACTOR = [
     "skill": "asset-publish",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "auto-exam-analyzer",
@@ -2491,7 +2514,7 @@ const BUS_FACTOR = [
     "skill": "conflict-detector",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "cover-check",
@@ -2503,19 +2526,19 @@ const BUS_FACTOR = [
     "skill": "crew-hr-review",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "crew-ranking",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "crm-report",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "curri-dashboard",
@@ -2533,19 +2556,19 @@ const BUS_FACTOR = [
     "skill": "daily",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "document-search",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "hr-legal",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "hr-risk",
@@ -2557,37 +2580,37 @@ const BUS_FACTOR = [
     "skill": "initiative-digest",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "initiative-sharpening",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "linear-reflect",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "linear-sync",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "meeting-prep",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "notion-sync",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "partnership-risk",
@@ -2599,13 +2622,13 @@ const BUS_FACTOR = [
     "skill": "pay-stub",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "presentation-builder",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "product-create",
@@ -2623,37 +2646,37 @@ const BUS_FACTOR = [
     "skill": "skill-dori",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "slack-reminder",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "unmet-needs",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "zoon"
+    "owner": "hyun"
   },
   {
     "skill": "vocab-book",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "yeonseung-insta",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   },
   {
     "skill": "yeonseung-reels",
     "contributors": 2,
     "risk": "HIGH",
-    "owner": "yeonseung"
+    "owner": "hyun"
   }
 ];
 const DEPS = [
@@ -2663,15 +2686,15 @@ const DEPS = [
   },
   {
     "from": "session-close",
-    "to": "workspace-hygiene"
-  },
-  {
-    "from": "session-close",
     "to": "linear-reflect"
   },
   {
     "from": "session-close",
     "to": "winning-ops"
+  },
+  {
+    "from": "session-close",
+    "to": "workspace-hygiene"
   },
   {
     "from": "daily",
@@ -2683,11 +2706,47 @@ const DEPS = [
   },
   {
     "from": "suneung-transform",
-    "to": "explain-cross-check"
+    "to": "db-text"
   },
   {
     "from": "suneung-transform",
+    "to": "explain-cross-check"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "class-ppt"
+  },
+  {
+    "from": "class-materials-pipeline",
     "to": "db-text"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "explain-cross-check"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "frame-publish"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "pk-explain"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "problem-import"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "skill-dori"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "suneung-pipeline"
+  },
+  {
+    "from": "class-materials-pipeline",
+    "to": "suneung-transform"
   },
   {
     "from": "linear-sync",
@@ -2706,36 +2765,48 @@ const DEPS = [
     "to": "frame-publish"
   },
   {
-    "from": "class-materials-pipeline",
-    "to": "explain-cross-check"
+    "from": "cc-health",
+    "to": "daily"
   },
   {
-    "from": "class-materials-pipeline",
-    "to": "problem-import"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "class-ppt"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "suneung-transform"
-  },
-  {
-    "from": "class-materials-pipeline",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "class-materials-pipeline",
+    "from": "cc-health",
     "to": "db-text"
   },
   {
-    "from": "class-materials-pipeline",
-    "to": "frame-publish"
+    "from": "cc-health",
+    "to": "exam-analyzer"
   },
   {
-    "from": "class-materials-pipeline",
-    "to": "pk-explain"
+    "from": "cc-health",
+    "to": "initiative-digest"
+  },
+  {
+    "from": "cc-health",
+    "to": "initiative-sharpening"
+  },
+  {
+    "from": "cc-health",
+    "to": "linear-sync"
+  },
+  {
+    "from": "cc-health",
+    "to": "notion-migrate"
+  },
+  {
+    "from": "cc-health",
+    "to": "notion-sync"
+  },
+  {
+    "from": "cc-health",
+    "to": "suneung-pipeline"
+  },
+  {
+    "from": "cc-health",
+    "to": "suneung-transform"
+  },
+  {
+    "from": "cc-health",
+    "to": "unmet-needs"
   },
   {
     "from": "frame-publish",
@@ -2748,50 +2819,6 @@ const DEPS = [
   {
     "from": "frame-publish",
     "to": "pk-explain"
-  },
-  {
-    "from": "cc-health",
-    "to": "notion-migrate"
-  },
-  {
-    "from": "cc-health",
-    "to": "linear-sync"
-  },
-  {
-    "from": "cc-health",
-    "to": "suneung-transform"
-  },
-  {
-    "from": "cc-health",
-    "to": "unmet-needs"
-  },
-  {
-    "from": "cc-health",
-    "to": "notion-sync"
-  },
-  {
-    "from": "cc-health",
-    "to": "daily"
-  },
-  {
-    "from": "cc-health",
-    "to": "suneung-pipeline"
-  },
-  {
-    "from": "cc-health",
-    "to": "db-text"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-sharpening"
-  },
-  {
-    "from": "cc-health",
-    "to": "initiative-digest"
-  },
-  {
-    "from": "cc-health",
-    "to": "exam-analyzer"
   },
   {
     "from": "crew-ranking",
@@ -2803,15 +2830,15 @@ const DEPS = [
   },
   {
     "from": "curri-manager",
-    "to": "curriculum-architect"
-  },
-  {
-    "from": "curri-manager",
     "to": "community-pulse"
   },
   {
     "from": "curri-manager",
     "to": "curri-dashboard"
+  },
+  {
+    "from": "curri-manager",
+    "to": "curriculum-architect"
   },
   {
     "from": "curri-manager",
@@ -2827,11 +2854,11 @@ const DEPS = [
   },
   {
     "from": "exam-report",
-    "to": "omr-verify"
+    "to": "exam-analyzer"
   },
   {
     "from": "exam-report",
-    "to": "exam-analyzer"
+    "to": "omr-verify"
   },
   {
     "from": "community-pulse",
@@ -2843,11 +2870,19 @@ const DEPS = [
   },
   {
     "from": "ebs-copyright-safe",
-    "to": "explain-cross-check"
+    "to": "db-text"
   },
   {
     "from": "ebs-copyright-safe",
-    "to": "db-text"
+    "to": "explain-cross-check"
+  },
+  {
+    "from": "explain-cross-check",
+    "to": "class-materials-pipeline"
+  },
+  {
+    "from": "explain-cross-check",
+    "to": "conflict-detector"
   },
   {
     "from": "explain-cross-check",
@@ -2859,23 +2894,15 @@ const DEPS = [
   },
   {
     "from": "explain-cross-check",
-    "to": "class-materials-pipeline"
-  },
-  {
-    "from": "explain-cross-check",
-    "to": "suneung-transform"
-  },
-  {
-    "from": "explain-cross-check",
-    "to": "conflict-detector"
-  },
-  {
-    "from": "explain-cross-check",
     "to": "frame-publish"
   },
   {
     "from": "explain-cross-check",
     "to": "pk-explain"
+  },
+  {
+    "from": "explain-cross-check",
+    "to": "suneung-transform"
   },
   {
     "from": "auto-exam-analyzer",
@@ -2887,11 +2914,11 @@ const DEPS = [
   },
   {
     "from": "crew-onboarding",
-    "to": "vocab-book"
+    "to": "crew-session-close"
   },
   {
     "from": "crew-onboarding",
-    "to": "crew-session-close"
+    "to": "vocab-book"
   },
   {
     "from": "crew-hr-review",
@@ -2911,15 +2938,15 @@ const DEPS = [
   },
   {
     "from": "hr-risk",
+    "to": "crew-hr-review"
+  },
+  {
+    "from": "hr-risk",
     "to": "crew-ranking"
   },
   {
     "from": "hr-risk",
     "to": "hr-legal"
-  },
-  {
-    "from": "hr-risk",
-    "to": "crew-hr-review"
   },
   {
     "from": "ai-salon-producer",
@@ -2943,11 +2970,11 @@ const DEPS = [
   },
   {
     "from": "initiative-digest",
-    "to": "unmet-needs"
+    "to": "initiative-sharpening"
   },
   {
     "from": "initiative-digest",
-    "to": "initiative-sharpening"
+    "to": "unmet-needs"
   },
   {
     "from": "initiative-sharpening",
@@ -2955,11 +2982,11 @@ const DEPS = [
   },
   {
     "from": "suneung-pipeline",
-    "to": "suneung-transform"
+    "to": "db-text"
   },
   {
     "from": "suneung-pipeline",
-    "to": "db-text"
+    "to": "suneung-transform"
   },
   {
     "from": "yeonseung-insta",
@@ -2975,7 +3002,7 @@ const DEPS = [
   },
   {
     "from": "curriculum-architect",
-    "to": "curri-manager"
+    "to": "asset-publish"
   },
   {
     "from": "curriculum-architect",
@@ -2983,7 +3010,7 @@ const DEPS = [
   },
   {
     "from": "curriculum-architect",
-    "to": "asset-publish"
+    "to": "curri-manager"
   },
   {
     "from": "curriculum-architect",
@@ -3015,11 +3042,11 @@ const DEPS = [
   },
   {
     "from": "promo-copy",
-    "to": "curriculum-architect"
+    "to": "asset-publish"
   },
   {
     "from": "promo-copy",
-    "to": "asset-publish"
+    "to": "curriculum-architect"
   },
   {
     "from": "promo-copy",
@@ -3031,15 +3058,7 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
-    "to": "linear-sync"
-  },
-  {
-    "from": "ve-ops",
     "to": "document-search"
-  },
-  {
-    "from": "ve-ops",
-    "to": "initiative-sharpening"
   },
   {
     "from": "ve-ops",
@@ -3047,11 +3066,19 @@ const DEPS = [
   },
   {
     "from": "ve-ops",
-    "to": "ve"
+    "to": "initiative-sharpening"
+  },
+  {
+    "from": "ve-ops",
+    "to": "linear-sync"
   },
   {
     "from": "ve-ops",
     "to": "session-close"
+  },
+  {
+    "from": "ve-ops",
+    "to": "ve"
   },
   {
     "from": "workspace-hygiene",
