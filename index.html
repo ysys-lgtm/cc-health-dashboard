@@ -138,13 +138,13 @@ footer{text-align:center;margin-top:24px;font-size:.65rem;color:var(--dim);opaci
 
 <header>
   <h1>CC 스킬 현황판</h1>
-  <div class="sub">2026-05-03 · Finito 팀 · 스킬 카탈로그 + 정비 논의용</div>
+  <div class="sub">2026-05-04 · Finito 팀 · 스킬 카탈로그 + 정비 논의용</div>
 </header>
 
 <div class="top-stats">
-  <div class="stat-pill"><div class="v">87</div><div class="l">전체 스킬</div></div>
-  <div class="stat-pill"><div class="v">48</div><div class="l">활성</div></div>
-  <div class="stat-pill"><div class="v">2</div><div class="l">신규</div></div>
+  <div class="stat-pill"><div class="v">89</div><div class="l">전체 스킬</div></div>
+  <div class="stat-pill"><div class="v">47</div><div class="l">활성</div></div>
+  <div class="stat-pill"><div class="v">4</div><div class="l">신규</div></div>
   <div class="stat-pill"><div class="v" style="color:var(--red)">0</div><div class="l">정리 필요</div></div>
   <div class="stat-pill"><div class="v" style="color:var(--red)">3</div><div class="l">스킬 없는 팀</div></div>
 </div>
@@ -201,12 +201,12 @@ const SKILLS = [
     "desc": "위닝하우스 팬 전환 자동화 — 굿즈 배부 알림, 이벤트 타이밍 알림, 예비팬 넛지. 'winning ops', '굿즈 알림', '이벤트 알림', '팬 전환', '위닝 옵스', '굿",
     "detail": "위닝하우스 팬 전환 자동화 — 굿즈 배부 알림, 이벤트 타이밍 알림, 예비팬 넛지. 'winning ops', '굿즈 알림', '이벤트 알림', '팬 전환', '위닝 옵스', '굿즈 배부', 'goods alert', '넛지' 요청에 사용.",
     "maker": "hyun",
-    "commits": 34,
+    "commits": 35,
     "lines": 130,
     "scripts": "있음",
     "mcp": "없음",
     "created": "2026-03-30",
-    "modified": "2026-04-21"
+    "modified": "2026-05-03"
   },
   {
     "name": "skill-dori",
@@ -217,12 +217,12 @@ const SKILLS = [
     "desc": "설명 없음",
     "detail": "",
     "maker": "hyun, yeonseung",
-    "commits": 28,
+    "commits": 29,
     "lines": 122,
     "scripts": "있음",
     "mcp": "없음",
     "created": "2026-04-13",
-    "modified": "2026-04-27"
+    "modified": "2026-05-03"
   },
   {
     "name": "exam-analyzer",
@@ -273,6 +273,54 @@ const SKILLS = [
     "modified": "2026-04-23"
   },
   {
+    "name": "session-close",
+    "trigger": "/session-close",
+    "cat": "세션 관리",
+    "catColor": "var(--cyan)",
+    "status": "활성",
+    "desc": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
+    "detail": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
+    "maker": "hyun, yeonseung, zoon",
+    "commits": 15,
+    "lines": 412,
+    "scripts": "없음",
+    "mcp": "있음",
+    "created": "2026-03-08",
+    "modified": "2026-05-04"
+  },
+  {
+    "name": "daily",
+    "trigger": "/daily, /daily-yeonseung",
+    "cat": "세션 관리",
+    "catColor": "var(--cyan)",
+    "status": "활성",
+    "desc": "데일리 브리핑 스킬. 세션 시작 시 사용자를 선택한 후 Linear Cycle 이슈, 전날 Slack 요약, 요일별 루틴, 아이디어/메모를 종합하여 오늘의 할 일을 브리핑한다",
+    "detail": "데일리 브리핑 스킬. 세션 시작 시 사용자를 선택한 후 Linear Cycle 이슈, 전날 Slack 요약, 요일별 루틴, 아이디어/메모를 종합하여 오늘의 할 일을 브리핑한다",
+    "maker": "hyun, zoon",
+    "commits": 14,
+    "lines": 302,
+    "scripts": "없음",
+    "mcp": "있음",
+    "created": "2026-03-09",
+    "modified": "2026-05-03"
+  },
+  {
+    "name": "hall-of-fame",
+    "trigger": "/hall-of-fame",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "활성",
+    "desc": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/h",
+    "detail": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/hall-of-fame', '명예의 전당', 'hall of fame' 요청 시 사용.",
+    "maker": "hyun",
+    "commits": 14,
+    "lines": 141,
+    "scripts": "있음",
+    "mcp": "없음",
+    "created": "2026-04-16",
+    "modified": "2026-04-30"
+  },
+  {
     "name": "live-content",
     "trigger": "/live-content",
     "cat": "콘텐츠 제작",
@@ -287,38 +335,6 @@ const SKILLS = [
     "mcp": "있음",
     "created": "2026-03-11",
     "modified": "2026-04-23"
-  },
-  {
-    "name": "session-close",
-    "trigger": "/session-close",
-    "cat": "세션 관리",
-    "catColor": "var(--cyan)",
-    "status": "활성",
-    "desc": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
-    "detail": "세션 종료 시 자동 커밋·푸시·Slack 알림 순차 실행",
-    "maker": "hyun, yeonseung, zoon",
-    "commits": 14,
-    "lines": 379,
-    "scripts": "없음",
-    "mcp": "있음",
-    "created": "2026-03-08",
-    "modified": "2026-04-21"
-  },
-  {
-    "name": "daily",
-    "trigger": "/daily, /daily-yeonseung",
-    "cat": "세션 관리",
-    "catColor": "var(--cyan)",
-    "status": "활성",
-    "desc": "데일리 브리핑 스킬. 세션 시작 시 사용자를 선택한 후 Linear Cycle 이슈, 전날 Slack 요약, 요일별 루틴, 아이디어/메모를 종합하여 오늘의 할 일을 브리핑한다",
-    "detail": "데일리 브리핑 스킬. 세션 시작 시 사용자를 선택한 후 Linear Cycle 이슈, 전날 Slack 요약, 요일별 루틴, 아이디어/메모를 종합하여 오늘의 할 일을 브리핑한다",
-    "maker": "hyun, zoon",
-    "commits": 13,
-    "lines": 302,
-    "scripts": "없음",
-    "mcp": "있음",
-    "created": "2026-03-09",
-    "modified": "2026-04-21"
   },
   {
     "name": "suneung-transform",
@@ -350,22 +366,6 @@ const SKILLS = [
     "scripts": "없음",
     "mcp": "없음",
     "created": "2026-04-02",
-    "modified": "2026-04-26"
-  },
-  {
-    "name": "hall-of-fame",
-    "trigger": "/hall-of-fame",
-    "cat": "도구",
-    "catColor": "var(--dim)",
-    "status": "활성",
-    "desc": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/h",
-    "detail": "주간 모의고사 상위권 명단을 Airtable Score Analysis에서 자동 추출해 서핑 테마 명예의 전당 PNG를 반별로 생성하고 직속크루 Slack 채널에 전달한다. '/hall-of-fame', '명예의 전당', 'hall of fame' 요청 시 사용.",
-    "maker": "hyun",
-    "commits": 12,
-    "lines": 127,
-    "scripts": "있음",
-    "mcp": "없음",
-    "created": "2026-04-16",
     "modified": "2026-04-26"
   },
   {
@@ -410,7 +410,7 @@ const SKILLS = [
     "detail": "",
     "maker": "hyun, yeonseung, 에이전트",
     "commits": 12,
-    "lines": 602,
+    "lines": 665,
     "scripts": "없음",
     "mcp": "없음",
     "created": "2026-03-22",
@@ -965,7 +965,7 @@ const SKILLS = [
     "trigger": "/drive-corpus",
     "cat": "도구",
     "catColor": "var(--dim)",
-    "status": "활성",
+    "status": "안정",
     "desc": "설명 없음",
     "detail": "",
     "maker": "에이전트",
@@ -1377,6 +1377,22 @@ const SKILLS = [
     "modified": "2026-04-05"
   },
   {
+    "name": "anc",
+    "trigger": "/anc",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "신규",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "hyun",
+    "commits": 1,
+    "lines": 54,
+    "scripts": "없음",
+    "mcp": "없음",
+    "created": "2026-05-03",
+    "modified": "2026-05-03"
+  },
+  {
     "name": "bd-review",
     "trigger": "/bd-review",
     "cat": "도구",
@@ -1455,6 +1471,22 @@ const SKILLS = [
     "mcp": "없음",
     "created": "2026-04-12",
     "modified": "2026-04-12"
+  },
+  {
+    "name": "omr-tuning-harness",
+    "trigger": "/omr-tuning-harness",
+    "cat": "도구",
+    "catColor": "var(--dim)",
+    "status": "신규",
+    "desc": "설명 없음",
+    "detail": "",
+    "maker": "woong",
+    "commits": 1,
+    "lines": 279,
+    "scripts": "없음",
+    "mcp": "없음",
+    "created": "2026-05-02",
+    "modified": "2026-05-02"
   },
   {
     "name": "ralph",
@@ -1588,14 +1620,15 @@ const SKILLS = [
 const MERGES = [
   {
     "title": "session-close 파이프라인 통합",
-    "summary": "session-close + linear-reflect + winning-ops + workspace-hygiene → 단일 스킬",
+    "summary": "session-close + anc + linear-reflect + winning-ops + workspace-hygiene → 단일 스킬",
     "skills": [
       "session-close",
+      "anc",
       "linear-reflect",
       "winning-ops",
       "workspace-hygiene"
     ],
-    "detail": "session-close이(가) linear-reflect, winning-ops, workspace-hygiene를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "session-close이(가) anc, linear-reflect, winning-ops, workspace-hygiene를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1639,6 +1672,18 @@ const MERGES = [
       "suneung-transform"
     ],
     "detail": "class-materials-pipeline이(가) class-ppt, db-text, explain-cross-check, frame-publish, pk-explain, problem-import, skill-dori, suneung-pipeline, suneung-transform를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
+    "type": "pipeline"
+  },
+  {
+    "title": "linear-sync 파이프라인 통합",
+    "summary": "linear-sync + anc + curriculum-architect → 단일 스킬",
+    "skills": [
+      "linear-sync",
+      "anc",
+      "curriculum-architect"
+    ],
+    "detail": "linear-sync이(가) anc, curriculum-architect를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1871,13 +1916,14 @@ const MERGES = [
   },
   {
     "title": "manager-ops 파이프라인 통합",
-    "summary": "manager-ops + live-content + winning-ops → 단일 스킬",
+    "summary": "manager-ops + anc + live-content + winning-ops → 단일 스킬",
     "skills": [
       "manager-ops",
+      "anc",
       "live-content",
       "winning-ops"
     ],
-    "detail": "manager-ops이(가) live-content, winning-ops를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "detail": "manager-ops이(가) anc, live-content, winning-ops를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -1908,6 +1954,19 @@ const MERGES = [
       "ve"
     ],
     "detail": "ve-ops이(가) crm-report, document-search, initiative-digest, initiative-sharpening, linear-sync, session-close, ve를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
+    "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
+    "type": "pipeline"
+  },
+  {
+    "title": "omr-tuning-harness 파이프라인 통합",
+    "summary": "omr-tuning-harness + omr-benchmark + omr-verify + ve → 단일 스킬",
+    "skills": [
+      "omr-tuning-harness",
+      "omr-benchmark",
+      "omr-verify",
+      "ve"
+    ],
+    "detail": "omr-tuning-harness이(가) omr-benchmark, omr-verify, ve를 순차 호출. 하나로 합치면 호출 1번으로 줄어듦.",
     "reason": "순차 의존 관계 — 파이프라인을 단일 스킬로 통합 가능",
     "type": "pipeline"
   },
@@ -2009,13 +2068,14 @@ const MERGES = [
   },
   {
     "title": "omr-* 스킬 통합 검토",
-    "summary": "omr-benchmark + omr-product + omr-verify",
+    "summary": "omr-benchmark + omr-product + omr-tuning-harness + omr-verify",
     "skills": [
       "omr-benchmark",
       "omr-product",
+      "omr-tuning-harness",
       "omr-verify"
     ],
-    "detail": "같은 접두사(omr-)를 공유하는 3개 스킬. 기능 중복 여부 검토 필요.",
+    "detail": "같은 접두사(omr-)를 공유하는 4개 스킬. 기능 중복 여부 검토 필요.",
     "reason": "이름 유사(omr-*) — 기능 겹침 가능성",
     "type": "name_prefix"
   },
@@ -2126,7 +2186,7 @@ const GAPS = [
 const DISCUSSES = [
   {
     "icon": "⚠️",
-    "title": "hyun 혼자 71개 스킬 관리",
+    "title": "hyun 혼자 72개 스킬 관리",
     "desc": "핵심 스킬의 공동 관리 논의 필요. hyun 부재 시 운영 리스크."
   },
   {
@@ -2146,13 +2206,13 @@ const DISCUSSES = [
   },
   {
     "icon": "⚠️",
-    "title": "단일 기여자 스킬 47개",
+    "title": "단일 기여자 스킬 49개",
     "desc": "CRITICAL Bus Factor 스킬이 많음. 핵심 스킬 공동 관리 체계 논의 필요."
   },
   {
     "icon": "💡",
-    "title": "비대한 스킬 10개",
-    "desc": "class-materials-pipeline, omr-verify, pk-explain, crew-ranking. 스크립트 없이 프롬프트만 474줄+. 스크립트 분리 권장."
+    "title": "비대한 스킬 11개",
+    "desc": "session-close, class-materials-pipeline, omr-verify, pk-explain. 스크립트 없이 프롬프트만 412줄+. 스크립트 분리 권장."
   },
   {
     "icon": "💡",
@@ -2168,16 +2228,16 @@ const DISCUSSES = [
 const AUTHORS = [
   {
     "name": "hyun",
-    "skills": 71,
-    "commits": 251,
-    "lastActive": "2026-04-27",
+    "skills": 72,
+    "commits": 255,
+    "lastActive": "2026-05-03",
     "topSkill": "winning-ops"
   },
   {
     "name": "yeonseung",
     "skills": 28,
-    "commits": 54,
-    "lastActive": "2026-04-26",
+    "commits": 55,
+    "lastActive": "2026-05-04",
     "topSkill": "skill-dori"
   },
   {
@@ -2195,18 +2255,18 @@ const AUTHORS = [
     "topSkill": "session-close"
   },
   {
+    "name": "woong",
+    "skills": 3,
+    "commits": 4,
+    "lastActive": "2026-05-02",
+    "topSkill": "product-create"
+  },
+  {
     "name": "community-watch-bot",
     "skills": 1,
     "commits": 4,
     "lastActive": "2026-04-26",
     "topSkill": "competitor-monitor"
-  },
-  {
-    "name": "woong",
-    "skills": 2,
-    "commits": 3,
-    "lastActive": "2026-04-29",
-    "topSkill": "product-create"
   }
 ];
 const BUS_FACTOR = [
@@ -2218,6 +2278,12 @@ const BUS_FACTOR = [
   },
   {
     "skill": "ai-salon-producer",
+    "contributors": 1,
+    "risk": "CRITICAL",
+    "owner": "hyun"
+  },
+  {
+    "skill": "anc",
     "contributors": 1,
     "risk": "CRITICAL",
     "owner": "hyun"
@@ -2383,6 +2449,12 @@ const BUS_FACTOR = [
     "contributors": 1,
     "risk": "CRITICAL",
     "owner": "hyun"
+  },
+  {
+    "skill": "omr-tuning-harness",
+    "contributors": 1,
+    "risk": "CRITICAL",
+    "owner": "woong"
   },
   {
     "skill": "omr-verify",
@@ -2686,6 +2758,10 @@ const DEPS = [
   },
   {
     "from": "session-close",
+    "to": "anc"
+  },
+  {
+    "from": "session-close",
     "to": "linear-reflect"
   },
   {
@@ -2703,6 +2779,10 @@ const DEPS = [
   {
     "from": "daily",
     "to": "session-close"
+  },
+  {
+    "from": "live-content",
+    "to": "anc"
   },
   {
     "from": "suneung-transform",
@@ -2747,6 +2827,10 @@ const DEPS = [
   {
     "from": "class-materials-pipeline",
     "to": "suneung-transform"
+  },
+  {
+    "from": "linear-sync",
+    "to": "anc"
   },
   {
     "from": "linear-sync",
@@ -3030,11 +3114,19 @@ const DEPS = [
   },
   {
     "from": "manager-ops",
+    "to": "anc"
+  },
+  {
+    "from": "manager-ops",
     "to": "live-content"
   },
   {
     "from": "manager-ops",
     "to": "winning-ops"
+  },
+  {
+    "from": "notion-migrate",
+    "to": "anc"
   },
   {
     "from": "problem-import",
@@ -3082,6 +3174,18 @@ const DEPS = [
   },
   {
     "from": "workspace-hygiene",
+    "to": "ve"
+  },
+  {
+    "from": "omr-tuning-harness",
+    "to": "omr-benchmark"
+  },
+  {
+    "from": "omr-tuning-harness",
+    "to": "omr-verify"
+  },
+  {
+    "from": "omr-tuning-harness",
     "to": "ve"
   },
   {
